@@ -1,0 +1,30 @@
+.p-search__form{
+    width: 396px;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+.p-search__wrapper{
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 10px;
+    
+}
+
+.p-search__icon{
+    padding: 5px;
+}
+.p-search__text{
+    width: 100%;
+    height: 100%;
+}
+
+.p-search__button{
+    width: 106px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #F2EDE9;
+}

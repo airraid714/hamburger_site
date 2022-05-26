@@ -1,0 +1,51 @@
+//--------------------
+//背景色
+//--------------------
+$background-header: #FFF7EF;
+$background-sidebar: #F2EDE9;
+$background-main: #fff;
+$background-footer: #9D8670;
+$background-text: rgba(255,255,255,0.8);
+
+//--------------------
+//フォントカラー
+//--------------------
+$color-site_tittle: #707070;
+$color-mainvisual_title: #fff;
+$color-section_tittle1: #EAEAEA;
+$color-section_tittle2: #fff;
+$color-contents_text: #3C2A10;
+$color-map_text: #fff;
+$color-footer_text: #fff;
+
+//表示領域
+//--------------------
+$width-header-pc: 80%;
+$width-sidebar-pc: 20%;
+
+$height-header-pc: 217px;
+$height-footer-pc: 150px;
+
+
+
+// ブレークポイント
+//--------------------
+@mixin breakpoint($point){
+    @if $point == tablet {
+        @media (min-width: 600px) {
+            @content;
+        }
+    }
+    @if $point == pc {
+        @media (min-width: 1025px) {
+            @content;
+        }
+    }
+
+}
+@include breakpoint(tablet){
+
+}
+@include breakpoint(pc){
+
+}

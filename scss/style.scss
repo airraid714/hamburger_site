@@ -1,21 +1,21 @@
 
 // Foundation
 // ---------------------------------
-
-@use  "foundation/reset";
-@use  "foundation/base";
-@use  "foundation/vertical";
+ 
+@use  "foundation/_reset";
+@use  "foundation/_base";
+@use  "foundation/_variable";
 
 //----------------------------------
 // Layout
 // ---------------------------------
 
-@use "layout/header";
-@use "layout/main";
-@use "layout/sidebar";
-@use "layout/footer";
-
-
+@use "layout/_header";
+@use "layout/_main";
+@use "layout/_sidebar";
+@use "layout/_footer";
+ 
+ 
 // ---------------------------------
 // Object
 // ---------------------------------
@@ -25,28 +25,30 @@
 // Component
 // ----------
 
-@use "Object/Component/button";
-@use "Object/Component/grid";
-@use "Object/Component/media";
-@use "Object/Component/tittle";
-
+@use "Object/Component/_button";
+@use "Object/Component/_grid";
+@use "Object/Component/_inner";
+@use "Object/Component/_tittle";
+@use "Object/Component/_container";
+ 
 // ----------
 // Project
 // ----------
-
-@use "Object/Project/articles";
-@use "Object/Project/comments";
-@use "Object/Project/gallery";
-@use "Object/Project/profile";
-@use "Object/Project/section";
-
+ 
+@use "Object/Project/_articles";
+@use "Object/Project/_mainvisual";
+@use "Object/Project/_map";
+@use "Object/Project/_menu";
+@use "Object/Project/_search";
+@use "Object/Project/_section";
+ 
 // ----------
 // Utility
 // ----------
 
-@use "Object/Utility/align";
-@use "Object/Utility/clearfix";
-@use "Object/Utility/margin";
-@use "Object/Utility/typography";
+@use "Object/Utility/_align";
+@use "Object/Utility/_clearfix";
+@use "Object/Utility/_margin";
+@use "Object/Utility/_typography";
 
 

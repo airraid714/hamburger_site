@@ -1,0 +1,52 @@
+@use "../../Foundation/variable";
+.c-inner__header{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.c-inner__search{
+   // margin-left: 32%;
+}
+.c-inner__sidebar{
+    background-color: #F2EDE9;
+}
+.c-inner__button{
+   
+}
+.c-inner__mainvisual{
+    background-image: url("../img/FrontPage/mainvisual(sp).jpg");
+    height: 300px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.c-inner__footer{
+    height: 100%;
+    background-image: url("../img/FrontPage/footer_visual.png");
+    background-size: cover;
+    color: variable.$color-footer_text;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.c-inner__link{
+    font-size: 21px;
+    position: relative;
+    margin-bottom: 30px;
+    &::after{
+        content: "";
+        width: 2px;
+        height: 25px;
+        background-color: #fff;
+        position: absolute;
+        left: 54%;
+    }
+}
+.c-inner__copyright{
+    font-size: 14px;
+}

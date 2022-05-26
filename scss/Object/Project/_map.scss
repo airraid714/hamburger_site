@@ -1,0 +1,50 @@
+@use "../../Foundation/_variable";
+
+.p-map__wrapper{
+
+}
+.p-map__map{
+    background-image: url("../img/FrontPage/map(sp).jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.p-map__inner{
+    background: rgba(0,0,0,0.4);
+    position: relative;
+    &::before{
+        content: "";
+        height: 50%;
+        width: 100%;
+        background: rgba(0,0,0,0.2);
+        position: absolute;
+        top:0;
+        left:0;
+    }
+
+}
+.p-map__content{
+    color: variable.$color-map_text;
+    padding: 45px;
+    min-height: 300px;
+}
+.p-map__tittle{
+    font-size: 30px;
+    position: relative;
+    margin-bottom: 20px;
+    &::after{
+        content: "";
+        height: 2.5px;
+        width: 75px;
+        background-color: #fff;
+        position: absolute;
+        bottom: -15px;
+        left:0;
+    }
+}
+.p-map__text{
+    font-size: 14px;
+    line-height: 3.3;
+    font-weight: bold;
+    z-index:1;
+}
