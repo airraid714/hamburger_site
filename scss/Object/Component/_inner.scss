@@ -12,10 +12,22 @@
    // margin-left: 32%;
 }
 .c-inner__sidebar{
+    height: 100%;
     background-color: #F2EDE9;
+    
+}
+.c-inner__close{
+    width: 100%;
+    display: flex;
+    justify-content: right;
 }
 .c-inner__button{
-   
+
+}
+.c-inner__menu{
+    margin-top: 212px;
+    margin-left: 93px;
+    color: variable.$color-sidebar_text;
 }
 .c-inner__mainvisual{
     background-image: url("../img/FrontPage/mainvisual(sp).jpg");

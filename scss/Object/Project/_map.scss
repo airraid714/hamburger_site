@@ -20,6 +20,7 @@
         position: absolute;
         top:0;
         left:0;
+        z-index: 0;
     }
 
 }
@@ -27,6 +28,8 @@
     color: variable.$color-map_text;
     padding: 45px;
     min-height: 300px;
+    position: relative;
+    z-index: 1;
 }
 .p-map__tittle{
     font-size: 30px;
@@ -46,5 +49,4 @@
     font-size: 14px;
     line-height: 3.3;
     font-weight: bold;
-    z-index:1;
 }

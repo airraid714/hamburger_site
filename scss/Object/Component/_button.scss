@@ -1,9 +1,40 @@
+@use "../../Foundation/variable";
+
 .c-button__menu{
-    font-size: 25px;
-    width: 100px;
+    width: 51px;
+    font-size: 20px;
+    font-weight: bold;
+    color: variable.$color-header_text;
 }
 .c-button__header{
-    display: flex;
-    align-items: center;
-    
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.c-button__close{
+    height: 32px;
+    position: relative;
+    display: block;
+
+    &::before{
+        content: "";
+        position: absolute;
+        background: variable.$color-sidebar_text;
+        width: 42px;
+        height: 6px;
+        right:17px;
+        top: 30px;
+        transform: rotate(45deg);
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        background: variable.$color-sidebar_text;
+        width: 42px;
+        height: 6px;
+        right:17px;
+        top: 30px;
+        transform: rotate(-45deg);
+    }
 }
