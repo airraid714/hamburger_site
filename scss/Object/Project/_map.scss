@@ -1,0 +1,99 @@
+@use "../../Foundation/_variable";
+
+.p-map__wrapper{
+
+}
+.p-map__map{
+    background-image: url("../img/FrontPage/map(pc).jpg");
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s;
+
+    @include variable.breakpoint(pc){
+        background-position: -300px;
+        background-size: cover;
+        transition: all 0.3s;
+
+    }
+}
+
+.p-map__inner{
+    background: rgba(0,0,0,0.4);
+    position: relative;
+
+    &::before{
+        content: "";
+        height: 50%;
+        width: 100%;
+        background: rgba(0,0,0,0.3);
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 0;
+        transition: all 0.3s;
+        
+        @include variable.breakpoint(tablet){
+            height: 100%;
+            transition: all 0.3s;
+
+        }
+        @include variable.breakpoint(pc){
+            height: 100%;
+            width: 60%;
+            transition: all 0.3s;
+
+        }
+    }
+
+}
+.p-map__content{
+    color: variable.$color-map_text;
+    padding: 45px;
+    min-height: 300px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s;
+
+
+    @include variable.breakpoint(pc){
+        width: 60%;
+        padding: 80px 65px 40px 60px;
+        transition: all 0.3s;
+
+    }
+}
+.p-map__tittle{
+    font-size: 30px;
+    position: relative;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+
+
+    @include variable.breakpoint(pc){
+        margin-bottom: 120px;
+        transition: all 0.3s;
+
+    }
+    &::after{
+        content: "";
+        height: 2.5px;
+        width: 75px;
+        background-color: #fff;
+        position: absolute;
+        bottom: -15px;
+        left:0;
+        transition: all 0.3s;
+
+
+        @include variable.breakpoint(pc){
+            bottom: -55px;
+            transition: all 0.3s;
+
+        }
+    }
+}
+.p-map__text{
+    font-size: 14px;
+    line-height: 3.3;
+    font-weight: bold;
+}

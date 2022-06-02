@@ -1,0 +1,20 @@
+@use "../../Foundation/variable";
+
+.c-layer__container{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    height: 100%;
+    width: 100%;
+    left: 100%;
+    z-index: 5;
+
+    &.is-open{
+        left: 0;
+        transition: all 0.3s;
+    }
+    
+    @include variable.breakpoint(pc){
+        display: none;
+    }
+
+}

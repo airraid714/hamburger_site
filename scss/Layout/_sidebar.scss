@@ -1,0 +1,34 @@
+@use "../Foundation/variable";
+
+.l-sidebar{
+    background: variable.$background-sidebar;
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    transition: all 0.3s;
+    overflow: scroll;
+    
+    &.is-open{
+        left: 20%;
+        transition: all 0.3s;
+
+        @include variable.breakpoint(tablet){
+            left: 55%;
+            width: 45%;
+            transition: all 0.3s;
+
+        }
+    
+    }
+
+    @include variable.breakpoint(pc){
+      width: 100%;
+      left: auto;
+      top: auto;
+      //overflow: hidden;
+    }
+
+} 
