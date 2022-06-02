@@ -5,10 +5,14 @@
     font-size: 20px;
     font-weight: bold;
     color: variable.$color-header_text;
+    transition: all 0.2s;
+
 
     @include variable.breakpoint(tablet){
         width: 10%;
         font-size: 34px;
+        transition: all 0.2s;
+
     }
     @include variable.breakpoint(pc){
         display: none;

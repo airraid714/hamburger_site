@@ -4,11 +4,14 @@
     font-size: 40px;
     margin-bottom: 38px;
     color: #707070;
+    transition: all 0.2s;
+
 
     @include variable.breakpoint(pc){
         margin-bottom: 0;
-       // margin-left: 65px;
         font-size: 64px;
+        transition: all 0.2s;
+
     }
 }
 
