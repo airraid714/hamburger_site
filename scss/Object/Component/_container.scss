@@ -1,6 +1,7 @@
+@use "../../Foundation/variable";
+
 .c-container {
     height: 100%;
-    display: flex;
-    position: relative;
-    flex-direction: column;
+    transition: all 0.3s;
+
 }

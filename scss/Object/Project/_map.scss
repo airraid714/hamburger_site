@@ -4,23 +4,38 @@
 
 }
 .p-map__map{
-    background-image: url("../img/FrontPage/map(sp).jpg");
+    background-image: url("../img/FrontPage/map(pc).jpg");
     background-size: cover;
     background-position: center;
+
+    @include variable.breakpoint(pc){
+        background-position: -300px;
+        background-size: cover;
+    }
 }
 
 .p-map__inner{
     background: rgba(0,0,0,0.4);
     position: relative;
+
     &::before{
         content: "";
         height: 50%;
         width: 100%;
-        background: rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.3);
         position: absolute;
         top:0;
         left:0;
         z-index: 0;
+        
+        @include variable.breakpoint(tablet){
+            height: 100%;
+            
+        }
+        @include variable.breakpoint(pc){
+            height: 100%;
+            width: 60%;
+        }
     }
 
 }
@@ -30,11 +45,20 @@
     min-height: 300px;
     position: relative;
     z-index: 1;
+
+    @include variable.breakpoint(pc){
+        width: 60%;
+        padding: 80px 65px 40px 60px;
+    }
 }
 .p-map__tittle{
     font-size: 30px;
     position: relative;
     margin-bottom: 20px;
+
+    @include variable.breakpoint(pc){
+        margin-bottom: 120px;
+    }
     &::after{
         content: "";
         height: 2.5px;
@@ -43,6 +67,10 @@
         position: absolute;
         bottom: -15px;
         left:0;
+
+        @include variable.breakpoint(pc){
+            bottom: -55px;
+        }
     }
 }
 .p-map__text{

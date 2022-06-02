@@ -5,6 +5,14 @@
     font-size: 20px;
     font-weight: bold;
     color: variable.$color-header_text;
+
+    @include variable.breakpoint(tablet){
+        width: 10%;
+        font-size: 34px;
+    }
+    @include variable.breakpoint(pc){
+        display: none;
+    }
 }
 .c-button__header{
     position: absolute;
@@ -13,10 +21,11 @@
 }
 .c-button__close{
     height: 32px;
+    width: 32px;
     position: relative;
     display: block;
 
-    &::before{
+    &::before ,&::after{
         content: "";
         position: absolute;
         background: variable.$color-sidebar_text;
@@ -24,17 +33,19 @@
         height: 6px;
         right:17px;
         top: 30px;
+
+        @include variable.breakpoint(pc){
+            display: none;
+        }
+        
+    }
+
+    &::before {
         transform: rotate(45deg);
     }
 
     &::after{
-        content: "";
-        position: absolute;
-        background: variable.$color-sidebar_text;
-        width: 42px;
-        height: 6px;
-        right:17px;
-        top: 30px;
         transform: rotate(-45deg);
+
     }
 }

@@ -6,12 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
         <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=BioRhyme&family=M+PLUS+Rounded+1c&family=Roboto:wght@700&display=swap" rel="stylesheet">        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=BioRhyme&family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        
     </head>
     <body>
-        <div class="c-container">
-            <header class="l-header">
+        <div class="c-container c-grid__layout">
+            <div class="c-layer__container"></div>
+            <header class="l-header c-grid__header">
                 <div class="c-inner__header">
                     <h1 class="c-tittle__site-tittle">Hamburger</h1>
                     <div class="c-inner__search">
@@ -19,22 +22,21 @@
                             <div class="p-search__wrapper">
                                 <img src="img\search_icon.png" class="p-search__icon">
                                 <input type="search" name="search" class="p-search__text">
-
                             </div>
                             <input type="submit" name="submit" value="検索" class="p-search__button">
                         </from>
                     </div>
                     <div class="c-button__header">
-                        <button class="c-button__menu">Menu</button>
+                        <button class="c-button__menu js-sideopen">Menu</button>
                     </div>
                 </div>
             </header>
 
-            <aside class="l-sidebar">
+            <aside class="l-sidebar c-grid__sidebar">
                 <div class="c-inner__sidebar">
                     <div class="c-inner__close">
-                        <span class="c-button__close">
-                        </span>
+                        <button class="c-button__close js-sideclose">
+                        </button>
                     </div>
                     <div class="c-inner__menu">
                         <ul class="p-menu__list">
@@ -67,73 +69,54 @@
                             <li class="p-menu__item">コーヒー（Ice/Hot）</li>
                         </ul>
                     </div>
-                    
-                    
                 </div>
             </aside>
 
-            <main class="l-main">
+            <main class="l-main c-grid__main">
                 <div class="c-inner__mainvisual">
                     <h2 class="c-tittle__mainvisual">ダミーサイト</h2>
                 </div>
                 <div class="p-section__wrapper">
                     <div class="p-section__inner p-section__background1">
                         <h2 class="p-section__tittle p-section__color1">Take Out</h2>
-                        <dl class="p-section__contents">
-                            <dt class="c-tittle__contents">Take Out</dt>
-                            <dd class="c-text__contets">
-                                当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウト
-                                で利用できる商品を掲載しています
-                                当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウト
-                                で利用できる商品を掲載しています
-                                当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウト
-                                で利用できる商品を掲載しています
-                                当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウト
-                                で利用できる商品を掲載しています
-                                当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウト
-                                で利用できる商品を掲載しています
-                                当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウト
-                                で利用できる商品を掲載しています
-                                当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウト
-                                で利用できる商品を掲載しています
-                            </dd>
-                        </dl>
-                        <dl class="p-section__contents">
-                            <dt class="c-tittle__contents">Take Out</dt>
-                            <dd class="c-text__contets">
-                                当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウト
-                                で利用できる商品を掲載しています
-                                当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウト
-                                で利用できる商品を掲載しています
-                                当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウト
-                                で利用できる商品を掲載しています
-                                当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウト
-                                で利用できる商品を掲載しています
-                                当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウト
-                                で利用できる商品を掲載しています
-                                当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウト
-                                で利用できる商品を掲載しています
-                                当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウト
-                                で利用できる商品を掲載しています
-                            </dd>
-                        </dl>
+                        <div class="c-inner__contents">
+                            <dl class="p-section__list">
+                                <dt class="c-tittle__contents">Take Out</dt>
+                                <dd class="c-text__contets">
+                                    <br>当店のテイクアウトで利用できる商品を掲載しています</br>
+                                    <br>当店のテイクアウトで利用できる商品を掲載しています</br>
+                                    <br>当店のテイクアウトで利用できる商品を掲載しています</br>
+                                    <br>当店のテイクアウトで利用できる商品を掲載しています</br>
+                                    <br>当店のテイクアウトで利用できる商品を掲載しています</br>
+                                    <br>当店のテイクアウトで利用できる商品を掲載しています</br>
+                                    <br>当店のテイクアウトで利用できる商品を掲載しています</br>
+
+                                </dd>
+                            </dl>
+                            <dl class="p-section__list">
+                                <dt class="c-tittle__contents">Take Out</dt>
+                                <dd class="c-text__contets">
+                                    当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウト
+                                    で利用できる商品を掲載しています
+                                </dd>
+                            </dl>
+                        </div>
                     </div>
                     <div class="p-section__inner p-section__background2">
                         <h2 class="p-section__tittle p-section__color2">Eat In</h2>
-                        <dl class="p-section__contents">
-                            <dt class="c-tittle__contents">Eat In</dt>
-                            <dd class="c-text__contents">
-                                店内でお食事いただけるメニューです店内でお
-                                食事いただけるメニューです                            
-                            </dd>
-                        </dl>
-                        <dl class="p-section__contents">
-                            <dt class="c-tittle__contents">Eat In</dt>
-                            <dd class="c-text__contents">
-                                店内でお食事いただけるメニューです店内でお
-                                食事いただけるメニューです                            
-                            </dd>
-                        </dl>
+                        <div class="c-inner__contents">
+                            <dl class="p-section__list">
+                                <dt class="c-tittle__contents">Eat In</dt>
+                                <dd class="c-text__contents">
+                                    店内でお食事いただけるメニューです店内でお
+                                    食事いただけるメニューです
+                                    店内でお食事いただけるメニューです店内でお
+                                    食事いただけるメニューです                            
+                                
+                                </dd>
+                            </dl>
+                        </div>
+
                     </div>
                 </div>
                 <div class="p-map__wrapper p-map__map">
@@ -158,7 +141,7 @@
                     </div>
                 </div>
             </main>
-            <footer class="l-footer">
+            <footer class="l-footer c-grid__footer">
                 <div class="c-inner__footer">
                     <div class="c-inner__link">
                         <a>ショップ情報</a>
@@ -169,6 +152,8 @@
                     </div>
                 </div>
             </footer>
+
         </div>
+        <script src="js/sidebar.js"></script>
     </body>
 </html>

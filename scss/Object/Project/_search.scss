@@ -1,8 +1,14 @@
+@use "../../Foundation/variable";
+
 .p-search__form{
-    width: 396px;
+    width: 320px;
     height: 35px;
     display: flex;
     justify-content: space-between;
+
+    @include variable.breakpoint(tablet){
+        width: 545px;
+    }
 }
 .p-search__wrapper{
     background-color: #fff;
@@ -22,9 +28,14 @@
 }
 
 .p-search__button{
-    width: 106px;
+    width: 78px;
     height: 35px;
+    margin-left: 7px;
     border: 1px solid black;
     border-radius: 10px;
     background-color: #F2EDE9;
+
+    @include variable.breakpoint(tablet){
+        width: 25%;
+    }
 }

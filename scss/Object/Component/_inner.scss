@@ -6,14 +6,28 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+
+    @include variable.breakpoint(pc){
+        flex-direction: inherit;
+        padding: 0 31px 0 65px;
+
+    }
 }
 
 .c-inner__search{
-   // margin-left: 32%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @include variable.breakpoint(pc){
+        justify-content: end;
+    }
+
+
 }
 .c-inner__sidebar{
     height: 100%;
-    background-color: #F2EDE9;
+    position: relative;
     
 }
 .c-inner__close{
@@ -26,7 +40,7 @@
 }
 .c-inner__menu{
     margin-top: 212px;
-    margin-left: 93px;
+    margin-left: 46px;
     color: variable.$color-sidebar_text;
 }
 .c-inner__mainvisual{
@@ -35,6 +49,17 @@
     background-size: cover;
     display: flex;
     align-items: center;
+
+    @include variable.breakpoint(tablet){
+        background-position: center;
+    }
+}
+.c-inner__contents{
+
+    :last-child{
+        margin-bottom: 0;
+    }
+
 }
 .c-inner__footer{
     height: 100%;
