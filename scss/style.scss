@@ -31,17 +31,20 @@
 @use "Object/Component/_tittle";
 @use "Object/Component/_container";
 @use "Object/Component/_layer";
+@use "Object/Component/_icon";
+@use "Object/Component/text";
  
 // ----------
 // Project
 // ----------
  
 @use "Object/Project/_articles";
-@use "Object/Project/_mainvisual";
+@use "Object/Project/_item";
 @use "Object/Project/_map";
 @use "Object/Project/_menu";
 @use "Object/Project/_search";
 @use "Object/Project/_section";
+@use "Object/Project/page";
  
 // ----------
 // Utility

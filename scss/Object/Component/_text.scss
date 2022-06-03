@@ -1,5 +1,20 @@
+@use "../../Foundation/variable" as *;
+
 .c-text__contents{
     font-size: 16px;
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    line-height: 2.3;
+}
+.c-text__articles{
+    font-size: 16px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+.c-text__item{
+    color: $white;
+    font-size: 16px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+
+}
+.c-text__pager{
+    font-size: 16px;
+    color: $gray;
 }

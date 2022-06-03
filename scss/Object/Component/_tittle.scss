@@ -11,16 +11,32 @@
         margin-bottom: 0;
         font-size: 64px;
         transition: all 0.2s;
-
     }
 }
 
 .c-tittle__mainvisual{
     font-size: 36px;
-    margin-left: 20px;
     color: variable.$color-mainvisual_title;
 }
 .c-tittle__contents{
     font-size: 22px;
     font-weight: bold;
+}
+.c-tittle__item{
+    font-size: 16px;
+    font-weight: bold;
+    color: variable.$white
+    
+}
+.c-tittle__articles{
+    font-size: 28px;
+    font-weight: bold;
+    color: variable.$color-contents_text;
+}
+
+.c-tittle__text{
+    color: variable.$white;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }

@@ -1,0 +1,54 @@
+@use "../../Foundation/variable" as *;
+
+.p-page__inner{
+    height: 230px;
+    position: relative;    
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.p-page__content{
+    width: 32%;
+    position: absolute;
+    top: 36%;
+    left: 10%;
+    transition: all 0.3s;
+
+    @include breakpoint(tablet){
+        left: 10%;
+        transition: all 0.3s;
+    }
+    @include breakpoint(pc){
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        left: 5%;
+        transition: all 0.3s;
+
+    }
+}
+
+.p-page__tittle{
+    font-family: 'Roboto', sans-serif;
+    &::after{
+        content: ":";
+    }
+
+    @include breakpoint(pc){
+        font-size: 60px;
+    }
+}
+.p-page__pager{
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0 30px;
+}
+.p-page__link{
+    width: 60px;
+  //  height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
