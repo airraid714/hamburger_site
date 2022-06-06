@@ -51,18 +51,13 @@
     background-size: cover;
     display: flex;
     align-items: center;
+    padding: 0 20px;
 
     @include variable.breakpoint(tablet){
         background-position: center;
     }
 }
-.c-inner__contents{
 
-    :last-child{
-        margin-bottom: 0;
-    }
-
-}
 .c-inner__footer{
     height: 100%;
     background-image: url("../img/FrontPage/footer_visual.png");
@@ -89,3 +84,4 @@
 .c-inner__copyright{
     font-size: 14px;
 }
+

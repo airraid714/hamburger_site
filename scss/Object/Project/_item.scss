@@ -1,0 +1,43 @@
+@use "../../Foundation/variable" as *;
+.p-item__list{
+    padding: 0 20px 20px;
+    :last-child{
+        margin-bottom: 0;
+
+    }
+}
+.p-item{
+    margin-bottom: 20px;
+
+    img{
+        width: 100%;
+        display: block;
+    }
+
+    @include breakpoint(tablet){
+        display: flex;
+    }
+}
+
+.p-item__content{
+    background: $dark-brown;
+    padding: 30px 17px 43px; 
+
+    
+}
+.p-item__box{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.p-item__link{
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: $gray;
+    background: $white;
+    border-radius: 40px;
+    line-height: 42px;
+    text-align: center;
+    width: 163px;
+}
