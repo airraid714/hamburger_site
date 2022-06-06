@@ -323,6 +323,7 @@ a {
 .c-icon {
   width: 17px;
   height: 17px;
+  margin: 8px;
 }
 
 .c-text__contents {
@@ -343,6 +344,7 @@ a {
 
 .c-text__pager {
   font-size: 16px;
+  font-weight: 200;
   color: #707070;
 }
 
@@ -679,16 +681,73 @@ a {
 }
 
 .p-page__pager {
-  padding: 0 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 50px 0 30px;
+}
+@media (min-width: 600px) {
+  .p-page__pager {
+    padding: 0 110px;
+    justify-content: inherit;
+  }
 }
 
 .p-page__link {
-  width: 60px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 19px;
+}
+
+.p-page__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 17px;
+  display: none;
+}
+.p-page__list :last-child {
+  margin-right: 0;
+}
+@media (min-width: 600px) {
+  .p-page__list {
+    display: block;
+    display: flex;
+  }
+}
+
+.p-page__item {
+  margin-right: 15px;
+  display: none;
+}
+@media (min-width: 600px) {
+  .p-page__item {
+    display: block;
+  }
+}
+
+.p-page__number {
+  display: none;
+  height: 35px;
+  width: 35px;
+  color: #707070;
+  font-weight: bold;
+  font-family: "Robot";
+  border: 1px solid #707070;
+  font-size: 16px;
+  text-align: center;
+  line-height: 35px;
+}
+@media (min-width: 600px) {
+  .p-page__number {
+    display: block;
+  }
+}
+
+.is-nowpage {
+  background: #3C2A10;
+  color: #FFF;
 }
 
 .u-margin__bottom1 {
@@ -702,5 +761,20 @@ a {
 
 .u-margin__top2 {
   margin-top: 24px;
+}
+
+.u-breakpoint__sm {
+  display: none;
+}
+@media (min-width: 600px) {
+  .u-breakpoint__sm {
+    display: block;
+  }
+}
+
+@media (min-width: 600px) {
+  .u-breakpoint__tab {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
