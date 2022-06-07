@@ -1,4 +1,4 @@
-@use "../../Foundation/variable";
+@use "../../Foundation/variable" as *;
 .c-inner__header{
     height: 100%;
     display: flex;
@@ -7,7 +7,7 @@
     align-items: center;
     position: relative;
 
-    @include variable.breakpoint(pc){
+    @include breakpoint(pc){
         flex-direction: inherit;
         padding: 0 31px 0 65px;
 
@@ -19,7 +19,7 @@
     display: flex;
     justify-content: center;
 
-    @include variable.breakpoint(pc){
+    @include breakpoint(pc){
         justify-content: end;
     }
 
@@ -42,7 +42,7 @@
     margin-top: 212px;
     margin-left: 46px;
     padding-bottom: 200px;
-    color: variable.$color-sidebar_text;
+    color: $color-sidebar_text;
     
 }
 .c-inner__mainvisual{
@@ -53,7 +53,7 @@
     align-items: center;
     padding: 0 20px;
 
-    @include variable.breakpoint(tablet){
+    @include breakpoint(tablet){
         background-position: center;
     }
 }
@@ -62,7 +62,7 @@
     height: 100%;
     background-image: url("../img/FrontPage/footer_visual.png");
     background-size: cover;
-    color: variable.$color-footer_text;
+    color: $color-footer_text;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -84,4 +84,13 @@
 .c-inner__copyright{
     font-size: 14px;
 }
+.c-inner__articles{
+    padding: 5%;
 
+    @include breakpoint(tablet){
+        padding: 7%;
+    }
+    @include breakpoint(pc){
+        padding: 6%;
+    }
+}

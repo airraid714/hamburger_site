@@ -1,8 +1,19 @@
 @use "../../Foundation/variable" as *;
+.p-page__wrapper{
 
-.p-page__inner{
-    height: 230px;
+}
+
+.p-page__inner-archive{
+    height: 283px;
     position: relative;    
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}
+.p-page__inner-single{
+    height: 225px;
+    position: relative;
     img{
         height: 100%;
         width: 100%;
@@ -10,7 +21,7 @@
 }
 
 .p-page__content{
-    width: 32%;
+   // width: 50%;
     position: absolute;
     top: 36%;
     left: 10%;
