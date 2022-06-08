@@ -22,9 +22,16 @@ img{
    display: block;
 }
 
-li{
+ul{
     list-style: none;
+}
+ol{
+    padding-left: 20px;
+
 }
 a{
     text-decoration: none;
+}
+li{
+    margin: 0;
 }
