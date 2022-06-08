@@ -19,12 +19,15 @@
         width: 100%;
         object-fit: cover;
     }
+
+    @include breakpoint(tablet){
+        height: 500px;
+    }
 }
 
 .p-page__content{
-   // width: 50%;
     position: absolute;
-    top: 36%;
+    top: 45%; //top: 36%;
     left: 10%;
     transition: all 0.3s;
 
