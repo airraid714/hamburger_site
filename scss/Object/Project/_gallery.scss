@@ -1,0 +1,20 @@
+@use "../../Foundation/variable" as *;
+.p-gallery__inner{
+    width: 100%;
+}
+.p-gallery__list{
+    width: 100%;
+    :last-child{
+        margin-bottom: 0;
+    }
+}
+.p-gallery__img{
+    margin-bottom: 20px;
+    width: 100%;
+    img{
+        width: 100%;
+    }
+    @include breakpoint(tablet){
+        margin-bottom: 0;
+    }
+}

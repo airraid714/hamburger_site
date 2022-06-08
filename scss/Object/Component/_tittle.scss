@@ -31,10 +31,22 @@
         font-size: 36px;
     }
 }
-.c-tittle__articles{
+.c-tittle__articles-h2{
     font-size: 28px;
     font-weight: bold;
     color: $color-contents_text;
+}
+.c-tittle__articles-h3{
+    font-size: 24px;
+    font-weight: bold;
+    color: $color-contents_text;
+}
+
+.c-tittle__articles-h456{
+    font-size: 20px;
+    font-weight: bold;
+    color: $color-contents_text;
+
 }
 
 .c-tittle__text{

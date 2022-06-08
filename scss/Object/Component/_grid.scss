@@ -1,6 +1,6 @@
-@use "../../Foundation/variable";
+@use "../../Foundation/variable" as *;
 
-@include variable.breakpoint(pc){
+@include breakpoint(pc){
     .c-grid__layout{
         display: grid;
         grid-template-columns: 1fr 20%;
@@ -34,4 +34,25 @@
         grid-row-start: 3;
         grid-row-end: 4;
     }
+}
+
+.c-grid__gallery{
+    
+    @include breakpoint(tablet){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    @include breakpoint(pc){
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+}
+
+.c-grid__table{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: repeat(4,77px);
+
 }
