@@ -706,10 +706,15 @@ li {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (min-width: 600px) {
+  .p-page__inner-single {
+    height: 500px;
+  }
+}
 
 .p-page__content {
   position: absolute;
-  top: 36%;
+  top: 45%;
   left: 10%;
   transition: all 0.3s;
 }
