@@ -347,15 +347,13 @@ li {
   position: relative;
 }
 
-@media (min-width: 600px) {
-  .c-layer__container.is-open {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.5);
-    height: 100%;
-    width: 100%;
-    top: 0;
-    z-index: 4;
-  }
+.c-layer__container.is-open {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 5;
 }
 @media (min-width: 1025px) {
   .c-layer__container.is-open {
@@ -363,26 +361,27 @@ li {
   }
 }
 
-.c-layer__sidebar {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.5);
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 100%;
-  z-index: 5;
-}
-.c-layer__sidebar.is-open {
-  left: 0;
-  transition: all 0.5s;
-}
-@media (min-width: 600px) {
-  .c-layer__sidebar {
-    display: none;
-    transition: all 0.3;
-  }
-}
+/*  .c-layer__sidebar{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 100%;
+    z-index: 5;
 
+
+    &.is-open{
+        left: 0;
+        transition: all 0.5s;
+    }
+
+    @include breakpoint(tablet){
+        display: none;
+        transition: all 0.3;
+    }
+
+}   */
 .c-layer__img {
   position: absolute;
   background: rgba(0, 0, 0, 0.3);
