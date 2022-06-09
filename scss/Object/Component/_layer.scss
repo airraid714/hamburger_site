@@ -1,20 +1,37 @@
-@use "../../Foundation/variable";
-
+@use "../../Foundation/variable" as *;
 .c-layer__container{
+   &.is-open{ 
+        @include breakpoint(tablet){
+            position: absolute;
+            background: rgba(0,0,0,0.5);
+            height: 100%;
+            width: 100%;
+            top: 0;
+            z-index: 4;
+            //transition: all .2s;    
+        }
+        @include breakpoint(pc){
+            display: none;
+        }
+    }
+}
+.c-layer__sidebar{
     position: absolute;
     background: rgba(0,0,0,0.5);
     height: 100%;
     width: 100%;
+    top: 0;
     left: 100%;
     z-index: 5;
 
     &.is-open{
         left: 0;
-        transition: all 0.3s;
+        transition: all 0.5s;
     }
     
-    @include variable.breakpoint(pc){
+    @include breakpoint(tablet){
         display: none;
+        transition: all 0.3;
     }
 
 }
