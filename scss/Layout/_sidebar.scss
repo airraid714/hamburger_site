@@ -13,13 +13,12 @@
     
     &.is-open{
         left: 20%;
-        transition: all 0.3s;
+        transition:  0.5s;
 
         @include variable.breakpoint(tablet){
             left: 55%;
             width: 45%;
-            transition: all 0.3s;
-
+            transition: all 0.5s;
         }
     
     }
@@ -28,7 +27,7 @@
       width: 100%;
       left: auto;
       top: auto;
-      //overflow: hidden;
+      overflow: hidden;
     }
 
 } 

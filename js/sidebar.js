@@ -1,13 +1,14 @@
 jQuery( function($){
     $(".js-sideopen").on("click",function(){    //メニューボタンを押すとサイドバーが出てくる
         $(".l-sidebar").toggleClass("is-open");
+        $(".c-layer__sidebar").toggleClass("is-open");
         $(".c-layer__container").toggleClass("is-open");
         $("body").toggleClass("is-open");
-
     });
 
     $(".c-button__close").on("click",function(){    // ☓ボダンを押すとサイドバーが戻る
         $(".l-sidebar").toggleClass("is-open");
+        $(".c-layer__sidebar").toggleClass("is-open");
         $(".c-layer__container").toggleClass("is-open");
         $("body").toggleClass("is-open");
     });
@@ -21,6 +22,7 @@ jQuery( function($){
       if (mm.matches) {
           console.log("テスト");
         $(".l-sidebar").removeClass("is-open");
+        $(".c-layer__sidebar").removeClass("is-open");
         $(".c-layer__container").removeClass("is-open");
         $("body").removeClass("is-open");
       }

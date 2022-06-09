@@ -57,13 +57,13 @@ li {
 }
 .l-sidebar.is-open {
   left: 20%;
-  transition: all 0.3s;
+  transition: 0.5s;
 }
 @media (min-width: 600px) {
   .l-sidebar.is-open {
     left: 55%;
     width: 45%;
-    transition: all 0.3s;
+    transition: all 0.5s;
   }
 }
 @media (min-width: 1025px) {
@@ -71,6 +71,7 @@ li {
     width: 100%;
     left: auto;
     top: auto;
+    overflow: hidden;
   }
 }
 
@@ -148,7 +149,7 @@ li {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-end: 3;
   }
 
   .c-grid__main {
@@ -160,7 +161,7 @@ li {
 
   .c-grid__footer {
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
   }
@@ -346,21 +347,39 @@ li {
   position: relative;
 }
 
-.c-layer__container {
+@media (min-width: 600px) {
+  .c-layer__container.is-open {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 4;
+  }
+}
+@media (min-width: 1025px) {
+  .c-layer__container.is-open {
+    display: none;
+  }
+}
+
+.c-layer__sidebar {
   position: absolute;
   background: rgba(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
+  top: 0;
   left: 100%;
   z-index: 5;
 }
-.c-layer__container.is-open {
+.c-layer__sidebar.is-open {
   left: 0;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
-@media (min-width: 1025px) {
-  .c-layer__container {
+@media (min-width: 600px) {
+  .c-layer__sidebar {
     display: none;
+    transition: all 0.3;
   }
 }
 
@@ -403,7 +422,12 @@ li {
 }
 
 .p-articles {
-  padding: 30px 0 0;
+  padding: 30px 20px;
+}
+@media (min-width: 600px) {
+  .p-articles {
+    padding: 36px 42px;
+  }
 }
 
 .p-item__list {
@@ -419,6 +443,8 @@ li {
 .p-item img {
   width: 100%;
   display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 600px) {
   .p-item {
@@ -1024,8 +1050,13 @@ li {
   margin-top: 24px;
 }
 
-.u-margin__top30 {
-  margin-top: 30px;
+.u-margin__archive-tittle {
+  margin-bottom: 30px;
+}
+@media (min-width: 600px) {
+  .u-margin__archive-tittle {
+    margin-bottom: 25px;
+  }
 }
 
 .u-margin__left10 {
