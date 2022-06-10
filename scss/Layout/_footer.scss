@@ -1,8 +1,37 @@
-@use "../Foundation/variable";
+@use "../Foundation/variable" as *;
 
 .l-footer{
     width: 100%;
-    height: 150px;
 }
 
+.p-footer{
+    height: 150px;
+    background-image: url("../img/FrontPage/footer_visual.png");
+    background-size: cover;
 
+}
+
+.p-footer__inner{
+    height: 100%;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.p-footer__link{
+    font-size: 21px;
+    position: relative;
+    margin-bottom: 30px;
+    &::after{
+        content: "";
+        width: 2px;
+        height: 25px;
+        background: $white;
+        position: absolute;
+        left: 54%;
+    }
+}
+.p-footer__copyright{
+    font-size: 14px;
+}

@@ -1,5 +1,18 @@
+@use "../Foundation/variable" as *;
+
 .l-header{
     width: 100%;
+}
+
+.p-header{
     height: 217px;
-    background-color: #FFF7EF;
+    background-color: $header-white;
+    flex-direction: column;
+    position: relative;
+
+    @include breakpoint(pc){
+        flex-direction: inherit;
+        padding: 0 31px 0 65px;
+
+    }
 }

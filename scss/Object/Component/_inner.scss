@@ -1,89 +1,21 @@
 @use "../../Foundation/variable" as *;
-.c-inner__header{
-    height: 100%;
+.c-inner{
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
-    position: relative;
-
-    @include breakpoint(pc){
-        flex-direction: inherit;
-        padding: 0 31px 0 65px;
-
-    }
-}
-
-.c-inner__search{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-    @include breakpoint(pc){
-        justify-content: end;
-    }
 
 
 }
-.c-inner__sidebar{
-    height: 100%;
-    position: relative;
-    
-}
-.c-inner__close{
-    width: 100%;
+
+.c-inner__button--close{
     display: flex;
     justify-content: right;
 }
-.c-inner__button{
 
-}
-.c-inner__menu{
-    margin-top: 212px;
-    margin-left: 46px;
-    padding-bottom: 200px;
-    color: $color-sidebar_text;
-    
-}
-.c-inner__mainvisual{
-    background-image: url("../img/FrontPage/mainvisual(sp).jpg");
-    height: 300px;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
 
-    @include breakpoint(tablet){
-        background-position: center;
-    }
-}
 
-.c-inner__footer{
-    height: 100%;
-    background-image: url("../img/FrontPage/footer_visual.png");
-    background-size: cover;
-    color: $color-footer_text;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.c-inner__link{
-    font-size: 21px;
-    position: relative;
-    margin-bottom: 30px;
-    &::after{
-        content: "";
-        width: 2px;
-        height: 25px;
-        background-color: #fff;
-        position: absolute;
-        left: 54%;
-    }
-}
-.c-inner__copyright{
-    font-size: 14px;
-}
+
+
 .c-inner__articles{
     padding: 5%;
 
@@ -92,5 +24,11 @@
     }
     @include breakpoint(pc){
         padding: 6%;
+    }
+}
+.c-inner__text{
+    padding-top: 30px;
+    @include breakpoint(tablet){
+        padding-top: 60px;
     }
 }

@@ -1,21 +1,17 @@
-@use "../Foundation/variable";
+@use "../Foundation/variable" as *;
 
 .l-sidebar{
-    background: variable.$background-sidebar;
-    position: absolute;
     height: 100%;
     width: 80%;
     top: 0;
     left: 100%;
     z-index: 10;
-    transition: all 0.3s;
-    overflow: scroll;
-    
+
     &.is-open{
         left: 20%;
         transition:  0.5s;
 
-        @include variable.breakpoint(tablet){
+        @include breakpoint(tablet){
             left: 55%;
             width: 45%;
             transition: all 0.5s;
@@ -23,7 +19,7 @@
     
     }
 
-    @include variable.breakpoint(pc){
+    @include breakpoint(pc){
       width: 100%;
       left: auto;
       top: auto;
@@ -31,3 +27,14 @@
     }
 
 } 
+.p-sidebar{
+    background: $background-sidebar;
+    position: absolute;
+    transition: all 0.3s;
+    overflow: scroll;
+}
+.p-sidebar__inner{
+    height: 100%;
+    position: relative;
+    
+}

@@ -35,8 +35,19 @@ li {
 
 .l-header {
   width: 100%;
+}
+
+.p-header {
   height: 217px;
   background-color: #FFF7EF;
+  flex-direction: column;
+  position: relative;
+}
+@media (min-width: 1025px) {
+  .p-header {
+    flex-direction: inherit;
+    padding: 0 31px 0 65px;
+  }
 }
 
 .l-main {
@@ -44,16 +55,26 @@ li {
   height: 100%;
 }
 
+.p-main .p-main__mainvisual {
+  background-image: url("../img/FrontPage/mainvisual(sp).jpg");
+  height: 300px;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+@media (min-width: 600px) {
+  .p-main .p-main__mainvisual {
+    background-position: center;
+  }
+}
+
 .l-sidebar {
-  background: #F2EDE9;
-  position: absolute;
   height: 100%;
   width: 80%;
   top: 0;
   left: 100%;
   z-index: 10;
-  transition: all 0.3s;
-  overflow: scroll;
 }
 .l-sidebar.is-open {
   left: 20%;
@@ -75,9 +96,53 @@ li {
   }
 }
 
+.p-sidebar {
+  background: #F2EDE9;
+  position: absolute;
+  transition: all 0.3s;
+  overflow: scroll;
+}
+
+.p-sidebar__inner {
+  height: 100%;
+  position: relative;
+}
+
 .l-footer {
   width: 100%;
+}
+
+.p-footer {
   height: 150px;
+  background-image: url("../img/FrontPage/footer_visual.png");
+  background-size: cover;
+}
+
+.p-footer__inner {
+  height: 100%;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-footer__link {
+  font-size: 21px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.p-footer__link::after {
+  content: "";
+  width: 2px;
+  height: 25px;
+  background: #FFF;
+  position: absolute;
+  left: 54%;
+}
+
+.p-footer__copyright {
+  font-size: 14px;
 }
 
 .c-button__menu {
@@ -185,91 +250,15 @@ li {
   grid-template-rows: repeat(4, 77px);
 }
 
-.c-inner__header {
-  height: 100%;
+.c-inner {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
-  position: relative;
-}
-@media (min-width: 1025px) {
-  .c-inner__header {
-    flex-direction: inherit;
-    padding: 0 31px 0 65px;
-  }
 }
 
-.c-inner__search {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-@media (min-width: 1025px) {
-  .c-inner__search {
-    justify-content: end;
-  }
-}
-
-.c-inner__sidebar {
-  height: 100%;
-  position: relative;
-}
-
-.c-inner__close {
-  width: 100%;
+.c-inner__button--close {
   display: flex;
   justify-content: right;
-}
-
-.c-inner__menu {
-  margin-top: 212px;
-  margin-left: 46px;
-  padding-bottom: 200px;
-  color: #707070;
-}
-
-.c-inner__mainvisual {
-  background-image: url("../img/FrontPage/mainvisual(sp).jpg");
-  height: 300px;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-}
-@media (min-width: 600px) {
-  .c-inner__mainvisual {
-    background-position: center;
-  }
-}
-
-.c-inner__footer {
-  height: 100%;
-  background-image: url("../img/FrontPage/footer_visual.png");
-  background-size: cover;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.c-inner__link {
-  font-size: 21px;
-  position: relative;
-  margin-bottom: 30px;
-}
-.c-inner__link::after {
-  content: "";
-  width: 2px;
-  height: 25px;
-  background-color: #fff;
-  position: absolute;
-  left: 54%;
-}
-
-.c-inner__copyright {
-  font-size: 14px;
 }
 
 .c-inner__articles {
@@ -283,6 +272,15 @@ li {
 @media (min-width: 1025px) {
   .c-inner__articles {
     padding: 6%;
+  }
+}
+
+.c-inner__text {
+  padding-top: 30px;
+}
+@media (min-width: 600px) {
+  .c-inner__text {
+    padding-top: 60px;
   }
 }
 
@@ -302,7 +300,7 @@ li {
 
 .c-tittle__mainvisual {
   font-size: 36px;
-  color: #fff;
+  color: #FFF;
 }
 
 .c-tittle__contents {
@@ -518,7 +516,7 @@ li {
 }
 
 .p-map__content {
-  color: #fff;
+  color: #FFF;
   padding: 45px;
   min-height: 300px;
   position: relative;
@@ -549,7 +547,7 @@ li {
   content: "";
   height: 2.5px;
   width: 75px;
-  background-color: #fff;
+  background: #FFF;
   position: absolute;
   bottom: -15px;
   left: 0;
@@ -568,6 +566,13 @@ li {
   font-weight: bold;
 }
 
+.p-menu {
+  margin-top: 212px;
+  margin-left: 46px;
+  padding-bottom: 200px;
+  color: #707070;
+}
+
 .p-menu__list {
   font-size: 24px;
   margin-bottom: 40px;
@@ -581,6 +586,17 @@ li {
   font-size: 20px;
   margin-bottom: 22px;
   margin-left: 20px;
+}
+
+.p-search__inner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 1025px) {
+  .p-search__inner {
+    justify-content: end;
+  }
 }
 
 .p-search__form {
@@ -604,7 +620,7 @@ li {
 }
 
 .p-search__wrapper {
-  background-color: #fff;
+  background: #FFF;
   width: 100%;
   display: flex;
   border: 1px solid black;
@@ -688,7 +704,7 @@ li {
   content: "";
   height: 3px;
   width: 37px;
-  background-color: #fff;
+  background-color: #FFF;
   position: absolute;
   top: 60px;
   left: 0;
@@ -696,7 +712,7 @@ li {
 
 .p-section__list {
   color: #3C2A10;
-  background-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   margin-bottom: 15px;
   font-size: 16px;
   line-height: 1.5;
@@ -709,7 +725,7 @@ li {
 }
 
 .p-section__color2 {
-  color: #fff;
+  color: #FFF;
 }
 
 .p-page__inner-archive {
@@ -975,15 +991,9 @@ li {
 .p-parts__list {
   margin-bottom: 20px;
 }
-.p-parts__list:nth-child(even) {
-  margin-left: 10px;
-}
 @media (min-width: 600px) {
   .p-parts__list {
     margin-left: 50px;
-  }
-  .p-parts__list:nth-child(even) {
-    margin-left: 60px;
   }
 }
 
@@ -998,15 +1008,21 @@ li {
 
 .p-parts__table {
   width: 100%;
-  border-top: 1px solid #707070;
-  border-left: 1px solid #707070;
 }
-.p-parts__table :only-child {
-  height: 100%;
-  background: #FFF;
-  border-bottom: 1px solid #707070;
-  border-right: 1px solid #707070;
-  padding: 28px 0 28px 30px;
+.p-parts__table tr {
+  height: 77px;
+  border-collapse: collapse;
+}
+.p-parts__table td {
+  padding-left: 28px;
+}
+
+.p-parts__cell-left {
+  width: 40%;
+}
+
+.p-parts__cell-right {
+  width: 60%;
 }
 
 .p-parts__button {
@@ -1058,8 +1074,13 @@ li {
   }
 }
 
-.u-margin__left10 {
-  margin-left: 10px;
+.u-margin__ul {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.u-margin__ol {
+  margin-top: 20px;
 }
 
 .u-breakpoint__sm {
