@@ -1,4 +1,21 @@
+@use "../Foundation/variable" as *;
+
 .l-main{
     width: 100%;
     height: 100%;
+}
+.p-main{
+    .p-main__mainvisual{
+        background-image: url("../img/FrontPage/mainvisual(sp).jpg");
+        height: 300px;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+    
+        @include breakpoint(tablet){
+            background-position: center;
+        }
+    
+    }
 }

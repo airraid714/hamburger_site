@@ -1,5 +1,14 @@
-@use "../../Foundation/variable";
+@use "../../Foundation/variable" as *;
+.p-search__inner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 
+    @include breakpoint(pc){
+        justify-content: end;
+    }
+
+}
 .p-search__form{
     width: 320px;
     height: 35px;
@@ -8,18 +17,18 @@
     transition: all 0.2s;
 
 
-    @include variable.breakpoint(tablet){
+    @include breakpoint(tablet){
         width: 65vw;
         transition: all 0.2s;
 
     }
-    @include variable.breakpoint(pc){
+    @include breakpoint(pc){
         width: 28vw;
         transition: all 0.2s;
     }
 }
 .p-search__wrapper{
-    background-color: #fff;
+    background: $white;
     width: 100%;
     display: flex;
     border: 1px solid black;
@@ -45,7 +54,7 @@
     transition: all 0.2s;
 
 
-    @include variable.breakpoint(tablet){
+    @include breakpoint(tablet){
         width: 25%;
         transition: all 0.2s;
     }

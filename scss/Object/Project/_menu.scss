@@ -1,3 +1,12 @@
+@use "../../Foundation/variable" as *;
+
+.p-menu{
+    margin-top: 212px;
+    margin-left: 46px;
+    padding-bottom: 200px;
+    color: $gray;
+    
+}
 .p-menu__list{
     font-size: 24px;
     margin-bottom: 40px;

@@ -6,7 +6,7 @@ jQuery( function($){
         $("body").toggleClass("is-open");
     });
 
-    $(".c-button__close").on("click",function(){    // ☓ボダンを押すとサイドバーが戻る
+    $(".js-sideclose").on("click",function(){    // ☓ボダンを押すとサイドバーが戻る
         $(".l-sidebar").toggleClass("is-open");
         $(".c-layer__sidebar").toggleClass("is-open");
         $(".c-layer__container").toggleClass("is-open");

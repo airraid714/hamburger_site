@@ -1,20 +1,20 @@
-@use "../../Foundation/variable";
+@use "../../Foundation/variable" as *;
 
 .c-button__menu{
     width: 51px;
     font-size: 20px;
     font-weight: bold;
-    color: variable.$color-header_text;
+    color: $gray;
     transition: all 0.2s;
 
 
-    @include variable.breakpoint(tablet){
+    @include breakpoint(tablet){
         width: 10%;
         font-size: 34px;
         transition: all 0.2s;
 
     }
-    @include variable.breakpoint(pc){
+    @include breakpoint(pc){
         display: none;
     }
 }
@@ -32,13 +32,13 @@
     &::before ,&::after{
         content: "";
         position: absolute;
-        background: variable.$color-sidebar_text;
+        background: $gray;
         width: 42px;
         height: 6px;
         right:17px;
         top: 30px;
 
-        @include variable.breakpoint(pc){
+        @include breakpoint(pc){
             display: none;
         }
         

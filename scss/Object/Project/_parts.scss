@@ -14,15 +14,9 @@
 }
 .p-parts__list{
     margin-bottom: 20px;
-    &:nth-child(even){
-        margin-left: 10px;
-    }
-    @include breakpoint(tablet){
-        margin-left: 50px;
-        &:nth-child(even){
-            margin-left: 60px;
-        }
     
+    @include breakpoint(tablet){
+        margin-left: 50px;    
     }
 
 }
@@ -36,16 +30,22 @@
 }
 .p-parts__table{
     width: 100%;
-    border-top: 1px solid $gray;
-    border-left: 1px solid $gray;
-    :only-child{
-        height: 100%;
-        background: $white;
-        border-bottom: 1px solid $gray;
-        border-right: 1px solid $gray;
-        padding: 28px 0 28px 30px;
+    
+    tr{
+        height: 77px;
+        border-collapse: collapse;
 
     }
+    td{
+        padding-left: 28px;
+    }
+
+}
+.p-parts__cell-left{
+    width: 40%;
+}
+.p-parts__cell-right{
+    width: 60%;
 }
 .p-parts__button{
     width: 100%;

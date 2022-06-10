@@ -1,15 +1,13 @@
-@use "../../Foundation/_variable";
+@use "../../Foundation/_variable" as *;
 
-.p-map__wrapper{
 
-}
 .p-map__map{
     background-image: url("../img/FrontPage/map(pc).jpg");
     background-size: cover;
     background-position: center;
     transition: all 0.3s;
 
-    @include variable.breakpoint(pc){
+    @include breakpoint(pc){
         background-position: -300px;
         background-size: cover;
         transition: all 0.3s;
@@ -32,12 +30,12 @@
         z-index: 0;
         transition: all 0.3s;
         
-        @include variable.breakpoint(tablet){
+        @include breakpoint(tablet){
             height: 100%;
             transition: all 0.3s;
 
         }
-        @include variable.breakpoint(pc){
+        @include breakpoint(pc){
             height: 100%;
             width: 60%;
             transition: all 0.3s;
@@ -47,7 +45,7 @@
 
 }
 .p-map__content{
-    color: variable.$color-map_text;
+    color: $white;
     padding: 45px;
     min-height: 300px;
     position: relative;
@@ -55,7 +53,7 @@
     transition: all 0.3s;
 
 
-    @include variable.breakpoint(pc){
+    @include breakpoint(pc){
         width: 60%;
         padding: 80px 65px 40px 60px;
         transition: all 0.3s;
@@ -69,7 +67,7 @@
     transition: all 0.3s;
 
 
-    @include variable.breakpoint(pc){
+    @include breakpoint(pc){
         margin-bottom: 120px;
         transition: all 0.3s;
 
@@ -78,14 +76,14 @@
         content: "";
         height: 2.5px;
         width: 75px;
-        background-color: #fff;
+        background: $white;
         position: absolute;
         bottom: -15px;
         left:0;
         transition: all 0.3s;
 
 
-        @include variable.breakpoint(pc){
+        @include breakpoint(pc){
             bottom: -55px;
             transition: all 0.3s;
 

@@ -1,14 +1,14 @@
-@use "../../Foundation/variable";
+@use "../../Foundation/variable" as *;
 
 .p-section__wrapper{
     padding: 20px 20px 30px;
     
-    @include variable.breakpoint(tablet){
+    @include breakpoint(tablet){
         display: flex;
         padding: 40px;
         justify-content: space-between;
     }
-    @include variable.breakpoint(pc){
+    @include breakpoint(pc){
         padding: 60px 55px 65px
     }
 }
@@ -19,7 +19,7 @@
     flex-direction: column;
     justify-content: space-between;
  
-    @include variable.breakpoint(tablet){
+    @include breakpoint(tablet){
         width: 48%;
         margin-bottom: 0;
     }
@@ -46,14 +46,14 @@
     content: "";
     height: 3px;
     width: 37px;
-    background-color: #fff;
+    background-color: $white;
     position: absolute;
     top:60px;
     left:0;
 }
 .p-section__list{
-    color: variable.$color-contents_text;
-    background-color: variable.$background-text;
+    color: $brown;
+    background: $background-text;
     margin-bottom: 15px;
     font-size: 16px;
     line-height: 1.5;
@@ -64,10 +64,10 @@
 }
 
 .p-section__color1{
-    color: variable.$color-section_tittle1;
+    color: $white-clear;
     
 }
 .p-section__color2{
-    color: variable.$color-section_tittle2;
+    color: $white;
 
 }
