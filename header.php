@@ -18,15 +18,7 @@
                     <h1 class="c-tittle__site-tittle">
                         <a href="<?php echo esc_url( home_url('/')); ?>"><?php bloginfo( 'name'); ?>
                     </h1>
-                    <div class="p-search__inner">
-                        <from action="" class="p-search__form">
-                            <div class="p-search__wrapper">
-                                <img src="img\search_icon.png" class="p-search__icon">
-                                <input type="search" name="search" class="p-search__text">
-                            </div>
-                            <input type="submit" name="submit" value="検索" class="p-search__button">
-                        </from>
-                    </div>
+                    <?php get_search_form(); ?>
                     <div class="c-button__header">
                         <button class="c-button__menu js-sideopen">Menu</button>
                     </div>
