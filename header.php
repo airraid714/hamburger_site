@@ -15,7 +15,9 @@
         <div class="c-container c-grid__layout">
             <header class="l-header c-grid__header">
                 <div class="c-inner p-header">
-                    <h1 class="c-tittle__site-tittle">Hamburger</h1>
+                    <h1 class="c-tittle__site-tittle">
+                        <a href="<?php echo esc_url( home_url('/')); ?>"><?php bloginfo( 'name'); ?>
+                    </h1>
                     <div class="p-search__inner">
                         <from action="" class="p-search__form">
                             <div class="p-search__wrapper">
