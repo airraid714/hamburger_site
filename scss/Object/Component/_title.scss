@@ -1,11 +1,15 @@
 @use "../../Foundation/variable" as *;
 
-.c-tittle__site-tittle{
+.c-title__site-title{
     font-size: 40px;
     margin-bottom: 38px;
-    color: $gray;
     transition: all 0.2s;
+    color: $gray;
 
+    a{
+        color: $gray;
+        font-family: $title-font;
+    }
 
     @include breakpoint(pc){
         margin-bottom: 0;
@@ -14,15 +18,15 @@
     }
 }
 
-.c-tittle__mainvisual{
+.c-title__mainvisual{
     font-size: 36px;
     color: $white;
 }
-.c-tittle__contents{
+.c-title__contents{
     font-size: 22px;
     font-weight: bold;
 }
-.c-tittle__item{
+.c-title__item{
     font-size: 20px;
     font-weight: bold;
     color: $white;
@@ -31,26 +35,26 @@
         font-size: 36px;
     }
 }
-.c-tittle__articles-h2{
+.c-title__articles-h2{
     font-size: 28px;
     font-weight: bold;
     color: $brown;
 
 }
-.c-tittle__articles-h3{
+.c-title__articles-h3{
     font-size: 24px;
     font-weight: bold;
     color: $brown;
 }
 
-.c-tittle__articles-h456{
+.c-title__articles-h456{
     font-size: 20px;
     font-weight: bold;
     color: $brown;
 
 }
 
-.c-tittle__text{
+.c-title__text{
     color: $white;
     font-size: 16px;
     font-weight: bold;

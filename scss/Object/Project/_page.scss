@@ -27,7 +27,7 @@
 
 .p-page__content{
     position: absolute;
-    top: 45%; //top: 36%;
+    top: 45%; 
     left: 10%;
     transition: all 0.3s;
 
@@ -45,7 +45,7 @@
     }
 }
 
-.p-page__tittle{
+.p-page__title{
     font-family: 'Roboto', sans-serif;
     &::after{
         content: ":";

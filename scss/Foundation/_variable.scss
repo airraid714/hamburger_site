@@ -19,9 +19,11 @@ $gray-souse: #F5F5F5;
 $brown: #3C2A10;
 $dark-brown: #3C2B1C;
 
-
-
-
+//--------------------
+//フォントファミリー
+//--------------------
+$text-font: 'M PLUS 1p', sans-serif;
+$title-font: 'Robot';
 // ブレークポイント
 //--------------------
 @mixin breakpoint($point){
@@ -35,11 +37,18 @@ $dark-brown: #3C2B1C;
             @content;
         }
     }
-
+    @if $point == wp-pc {
+        @media (min-width: 782px) {
+            @content;
+        }
+    }
 }
 @include breakpoint(tablet){
 
 }
 @include breakpoint(pc){
 
+}
+@include breakpoint(wp-pc){
+    
 }

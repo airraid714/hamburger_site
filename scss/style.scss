@@ -14,6 +14,7 @@
 @use "layout/_main";
 @use "layout/_sidebar";
 @use "layout/_footer";
+@use "layout/_wp";
  
  
 // ---------------------------------
@@ -26,9 +27,10 @@
 // ----------
 
 @use "Object/Component/_button";
+
 @use "Object/Component/_grid";
 @use "Object/Component/_inner";
-@use "Object/Component/_tittle";
+@use "Object/Component/_title";
 @use "Object/Component/_container";
 @use "Object/Component/_layer";
 @use "Object/Component/_icon";

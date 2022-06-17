@@ -8,6 +8,7 @@ html {
 body {
   width: 100%;
   height: 100%;
+  font-family: "M PLUS 1p", sans-serif;
 }
 body.is-open {
   position: fixed;
@@ -40,6 +41,9 @@ li {
 .p-header {
   height: 217px;
   background-color: #FFF7EF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   position: relative;
 }
@@ -47,6 +51,7 @@ li {
   .p-header {
     flex-direction: inherit;
     padding: 0 31px 0 65px;
+    justify-content: space-between;
   }
 }
 
@@ -143,6 +148,28 @@ li {
 
 .p-footer__copyright {
   font-size: 14px;
+}
+
+#wpadminbar {
+  position: absolute;
+  top: -46px;
+}
+@media (min-width: 600px) {
+  #wpadminbar {
+    top: 0;
+    position: fixed;
+  }
+}
+
+@media (min-width: 600px) {
+  #wp-admin-bar-wp-logo .ab-icon::before {
+    top: 8px !important;
+  }
+}
+@media (min-width: 782px) {
+  #wp-admin-bar-wp-logo .ab-icon::before {
+    top: 2px !important;
+  }
 }
 
 .c-button__menu {
@@ -284,55 +311,59 @@ li {
   }
 }
 
-.c-tittle__site-tittle {
+.c-title__site-title {
   font-size: 40px;
   margin-bottom: 38px;
-  color: #707070;
   transition: all 0.2s;
+  color: #707070;
+}
+.c-title__site-title a {
+  color: #707070;
+  font-family: "Robot";
 }
 @media (min-width: 1025px) {
-  .c-tittle__site-tittle {
+  .c-title__site-title {
     margin-bottom: 0;
     font-size: 64px;
     transition: all 0.2s;
   }
 }
 
-.c-tittle__mainvisual {
+.c-title__mainvisual {
   font-size: 36px;
   color: #FFF;
 }
 
-.c-tittle__contents {
+.c-title__contents {
   font-size: 22px;
   font-weight: bold;
 }
 
-.c-tittle__item {
+.c-title__item {
   font-size: 20px;
   font-weight: bold;
   color: #FFF;
 }
 
-.c-tittle__articles-h2 {
+.c-title__articles-h2 {
   font-size: 28px;
   font-weight: bold;
   color: #3C2A10;
 }
 
-.c-tittle__articles-h3 {
+.c-title__articles-h3 {
   font-size: 24px;
   font-weight: bold;
   color: #3C2A10;
 }
 
-.c-tittle__articles-h456 {
+.c-title__articles-h456 {
   font-size: 20px;
   font-weight: bold;
   color: #3C2A10;
 }
 
-.c-tittle__text {
+.c-title__text {
   color: #FFF;
   font-size: 16px;
   font-weight: bold;
@@ -397,19 +428,19 @@ li {
 
 .c-text__contents {
   font-size: 16px;
-  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-family: "M PLUS 1p", sans-serif;
 }
 
 .c-text__articles {
   color: #3C2A10;
   font-size: 16px;
-  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-family: "M PLUS 1p", sans-serif;
 }
 
 .c-text__item {
   color: #FFF;
   font-size: 16px;
-  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-family: "M PLUS 1p", sans-serif;
 }
 
 .c-text__pager {
@@ -531,19 +562,19 @@ li {
   }
 }
 
-.p-map__tittle {
+.p-map__title {
   font-size: 30px;
   position: relative;
   margin-bottom: 20px;
   transition: all 0.3s;
 }
 @media (min-width: 1025px) {
-  .p-map__tittle {
+  .p-map__title {
     margin-bottom: 120px;
     transition: all 0.3s;
   }
 }
-.p-map__tittle::after {
+.p-map__title::after {
   content: "";
   height: 2.5px;
   width: 75px;
@@ -554,7 +585,7 @@ li {
   transition: all 0.3s;
 }
 @media (min-width: 1025px) {
-  .p-map__tittle::after {
+  .p-map__title::after {
     bottom: -55px;
     transition: all 0.3s;
   }
@@ -578,7 +609,7 @@ li {
   margin-bottom: 40px;
 }
 
-.p-menu__tittle {
+.p-menu__title {
   margin-bottom: 40px;
 }
 
@@ -605,6 +636,7 @@ li {
   display: flex;
   justify-content: space-between;
   transition: all 0.2s;
+  position: relative;
 }
 @media (min-width: 600px) {
   .p-search__form {
@@ -622,13 +654,14 @@ li {
 .p-search__wrapper {
   background: #FFF;
   width: 100%;
-  display: flex;
   border: 1px solid black;
   border-radius: 10px;
 }
 
 .p-search__icon {
   padding: 5px;
+  position: absolute;
+  left: 0;
 }
 
 .p-search__text {
@@ -648,6 +681,48 @@ li {
 @media (min-width: 600px) {
   .p-search__button {
     width: 25%;
+    transition: all 0.2s;
+  }
+}
+
+.searchform {
+  width: 100%;
+  display: flex;
+}
+.searchform div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.searchform label {
+  display: none;
+}
+.searchform input[type=text] {
+  width: 230px;
+  height: 100%;
+  padding-left: 40px;
+  font-size: 16px;
+  background: #FFF;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+@media (min-width: 600px) {
+  .searchform input[type=text] {
+    width: 396px;
+  }
+}
+.searchform input[type=submit] {
+  width: 78px;
+  height: 100%;
+  margin-left: 7px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #F2EDE9;
+  transition: all 0.2s;
+}
+@media (min-width: 600px) {
+  .searchform input[type=submit] {
+    width: 136px;
     transition: all 0.2s;
   }
 }
@@ -692,7 +767,7 @@ li {
   background-size: cover;
 }
 
-.p-section__tittle {
+.p-section__title {
   font-size: 41px;
   font-family: "Roboto";
   font-weight: bold;
@@ -700,7 +775,7 @@ li {
   margin-bottom: 60%;
 }
 
-.p-section__tittle::after {
+.p-section__title::after {
   content: "";
   height: 3px;
   width: 37px;
@@ -775,14 +850,14 @@ li {
   }
 }
 
-.p-page__tittle {
+.p-page__title {
   font-family: "Roboto", sans-serif;
 }
-.p-page__tittle::after {
+.p-page__title::after {
   content: ":";
 }
 @media (min-width: 1025px) {
-  .p-page__tittle {
+  .p-page__title {
     font-size: 60px;
   }
 }
@@ -1065,11 +1140,11 @@ li {
   margin-top: 24px;
 }
 
-.u-margin__archive-tittle {
+.u-margin__archive-title {
   margin-bottom: 30px;
 }
 @media (min-width: 600px) {
-  .u-margin__archive-tittle {
+  .u-margin__archive-title {
     margin-bottom: 25px;
   }
 }

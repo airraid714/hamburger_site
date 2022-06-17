@@ -1,0 +1,28 @@
+@use "../Foundation/variable" as *;
+
+//-------------------
+//WPのadminバーがずれるのを修正
+#wpadminbar{
+    position: absolute;
+    top: -46px;
+    @include breakpoint(tablet){
+        top: 0;
+        position: fixed;
+    }
+}
+
+
+#wp-admin-bar-wp-logo{
+    .ab-icon{
+        &::before{
+            @include breakpoint(tablet){
+            
+                top: 8px !important;
+            }
+            
+            @include breakpoint(wp-pc){
+                top: 2px !important;
+            } 
+        }       
+    }
+}
