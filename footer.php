@@ -1,4 +1,4 @@
-<footer class="l-footer p-footer c-grid__footer">
+            <footer class="l-footer p-footer c-grid__footer">
                 <div class="p-footer__inner">
                     <div class="p-footer__link">
                         <a>ショップ情報</a>
@@ -8,6 +8,7 @@
                         <p>Copyright: RaiseTech</p>
                     </div>
                 </div>
+                <?php wp_footer(); ?>
             </footer>
             
             <div class="c-layer__container"></div>

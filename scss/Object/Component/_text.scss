@@ -2,17 +2,17 @@
 
 .c-text__contents{
     font-size: 16px;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: $text-font;
 }
 .c-text__articles{
     color: $brown;
     font-size: 16px;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: $text-font;
 }
 .c-text__item{
     color: $white;
     font-size: 16px;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: $text-font;
 
 }
 .c-text__pager{
