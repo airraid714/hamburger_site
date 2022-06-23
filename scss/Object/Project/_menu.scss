@@ -1,5 +1,6 @@
 @use "../../Foundation/variable" as *;
 
+/*
 .p-menu{
     margin-top: 212px;
     margin-left: 46px;
@@ -22,4 +23,41 @@
     font-size: 20px;
     margin-bottom: 22px;
     margin-left: 20px;
+}
+*/
+///------------------
+/// サイドバーのメニューをテンプレートで呼び出したときのCSS
+///-----------------
+.p-menu{
+    padding-top: 52px;
+    margin-left: 46px;
+    padding-bottom: 200px;
+
+    >div{
+        margin-top: 75px;
+        >.menu{
+
+            >li{
+                margin-bottom: 40px;
+                >a{
+                    display: block;
+                    font-size: 24px;
+                    margin-bottom: 40px;
+                    color: $gray;
+                }
+                >.sub-menu{
+                    padding-left: 20px;
+                    font-size: 20px;
+                    
+                    >li{
+                       margin-bottom: 22px;
+
+                       >a{
+                        color: $gray;
+                       }
+                    }
+                }
+            }
+        }
+    }
 }

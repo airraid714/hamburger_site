@@ -23,7 +23,6 @@
       width: 100%;
       left: auto;
       top: auto;
-      overflow: hidden;
     }
 
 } 
@@ -32,6 +31,9 @@
     position: absolute;
     transition: all 0.3s;
     overflow: scroll;
+    @include breakpoint(pc){
+        overflow: hidden;
+    }
 }
 .p-sidebar__inner{
     height: 100%;

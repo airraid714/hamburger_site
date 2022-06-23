@@ -6,4 +6,22 @@
     @include breakpoint(tablet){
         padding: 36px 42px;
     }
+
+    >h2{
+        font-size: 28px;
+        font-weight: bold;
+        font-family: $text-font;
+        color: $brown;
+        margin-bottom: 30px;
+        
+        @include breakpoint(tablet){
+            font-size: 36px;
+            margin-bottom: 25px;
+        }
+    }
+    >p{
+        color: $brown;
+        font-size: 16px;
+        font-family: $text-font;    
+    }
 }

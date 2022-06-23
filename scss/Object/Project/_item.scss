@@ -1,8 +1,9 @@
 @use "../../Foundation/variable" as *;
 .p-item__wrapper{
-   // margin-top: 30px;
+    width: 100%;
 }
 .p-item__list{
+    max-width: 100%;
     padding: 0 20px 20px;
     :last-child{
         margin-bottom: 0;
@@ -10,13 +11,18 @@
     }
 }
 .p-item{
+    width: 100%;
     margin-bottom: 20px;
 
-    img{
+    >img{
         width: 100%;
+        height: 230px;
         display: block;
         object-fit: cover;
-
+        @include breakpoint(tablet){
+            width: 50%;
+            height: 355px;
+        }
     }
 
     @include breakpoint(tablet){
@@ -25,10 +31,26 @@
 }
 
 .p-item__content{
+    width: 100%;
     background: $dark-brown;
     padding: 30px 17px 43px; 
 
-    
+    @include breakpoint(tablet){
+        width: 50%;
+    }
+
+    >h2{
+        color: $white;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: $text-font;    
+        margin-bottom: 10px;
+    }
+    >p{
+        color: $white;
+        font-size: 16px;
+        font-family: $text-font;    
+    }
 }
 .p-item__box{
     display: flex;

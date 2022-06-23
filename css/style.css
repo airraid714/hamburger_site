@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 62.5%;
   width: 100%;
@@ -97,7 +98,6 @@ li {
     width: 100%;
     left: auto;
     top: auto;
-    overflow: hidden;
   }
 }
 
@@ -106,6 +106,11 @@ li {
   position: absolute;
   transition: all 0.3s;
   overflow: scroll;
+}
+@media (min-width: 1025px) {
+  .p-sidebar {
+    overflow: hidden;
+  }
 }
 
 .p-sidebar__inner {
@@ -125,29 +130,55 @@ li {
 
 .p-footer__inner {
   height: 100%;
-  color: #FFF;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-.p-footer__link {
-  font-size: 21px;
+.p-footer__inner > div > ul {
+  display: flex;
   position: relative;
   margin-bottom: 30px;
+  position: relative;
 }
-.p-footer__link::after {
+.p-footer__inner > div > ul > li {
+  margin: 0 20px;
+}
+.p-footer__inner > div > ul > li > a {
+  display: block;
+  font-size: 21px;
+  color: #FFF;
+}
+.p-footer__inner > div > ul::after {
   content: "";
   width: 2px;
   height: 25px;
   background: #FFF;
   position: absolute;
-  left: 54%;
+  left: 53%;
 }
 
+/*
+.p-footer__link{
+    font-size: 21px;
+    position: relative;
+    margin-bottom: 30px;
+    &::after{
+        content: "";
+        width: 2px;
+        height: 25px;
+        background: $white;
+        position: absolute;
+        left: 53%;
+    }
+    a{
+        margin: 0 20px;
+    }
+}
+*/
 .p-footer__copyright {
   font-size: 14px;
+  color: #FFF;
 }
 
 #wpadminbar {
@@ -367,7 +398,19 @@ li {
   color: #FFF;
   font-size: 16px;
   font-weight: bold;
-  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-family: "M PLUS 1p", sans-serif;
+}
+
+.c-title__sidebar {
+  display: none;
+  font-size: 34px;
+  color: #707070;
+  font-family: "Robot";
+}
+@media (min-width: 1025px) {
+  .c-title__sidebar {
+    display: block;
+  }
 }
 
 .c-container {
@@ -457,8 +500,31 @@ li {
     padding: 36px 42px;
   }
 }
+.p-articles > h2 {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "M PLUS 1p", sans-serif;
+  color: #3C2A10;
+  margin-bottom: 30px;
+}
+@media (min-width: 600px) {
+  .p-articles > h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+}
+.p-articles > p {
+  color: #3C2A10;
+  font-size: 16px;
+  font-family: "M PLUS 1p", sans-serif;
+}
+
+.p-item__wrapper {
+  width: 100%;
+}
 
 .p-item__list {
+  max-width: 100%;
   padding: 0 20px 20px;
 }
 .p-item__list :last-child {
@@ -466,13 +532,21 @@ li {
 }
 
 .p-item {
+  width: 100%;
   margin-bottom: 20px;
 }
-.p-item img {
+.p-item > img {
   width: 100%;
+  height: 230px;
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 600px) {
+  .p-item > img {
+    width: 50%;
+    height: 355px;
+  }
 }
 @media (min-width: 600px) {
   .p-item {
@@ -481,8 +555,26 @@ li {
 }
 
 .p-item__content {
+  width: 100%;
   background: #3C2B1C;
   padding: 30px 17px 43px;
+}
+@media (min-width: 600px) {
+  .p-item__content {
+    width: 50%;
+  }
+}
+.p-item__content > h2 {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "M PLUS 1p", sans-serif;
+  margin-bottom: 10px;
+}
+.p-item__content > p {
+  color: #FFF;
+  font-size: 16px;
+  font-family: "M PLUS 1p", sans-serif;
 }
 
 .p-item__box {
@@ -597,26 +689,57 @@ li {
   font-weight: bold;
 }
 
+/*
+.p-menu{
+    margin-top: 212px;
+    margin-left: 46px;
+    padding-bottom: 200px;
+    color: $gray;
+
+}
+.p-menu__list{
+    font-size: 24px;
+    margin-bottom: 40px;
+
+}
+
+.p-menu__title{
+    margin-bottom: 40px;
+}
+
+
+.p-menu__item{
+    font-size: 20px;
+    margin-bottom: 22px;
+    margin-left: 20px;
+}
+*/
 .p-menu {
-  margin-top: 212px;
+  padding-top: 52px;
   margin-left: 46px;
   padding-bottom: 200px;
-  color: #707070;
 }
-
-.p-menu__list {
+.p-menu > div {
+  margin-top: 75px;
+}
+.p-menu > div > .menu > li {
+  margin-bottom: 40px;
+}
+.p-menu > div > .menu > li > a {
+  display: block;
   font-size: 24px;
   margin-bottom: 40px;
+  color: #707070;
 }
-
-.p-menu__title {
-  margin-bottom: 40px;
-}
-
-.p-menu__item {
+.p-menu > div > .menu > li > .sub-menu {
+  padding-left: 20px;
   font-size: 20px;
+}
+.p-menu > div > .menu > li > .sub-menu > li {
   margin-bottom: 22px;
-  margin-left: 20px;
+}
+.p-menu > div > .menu > li > .sub-menu > li > a {
+  color: #707070;
 }
 
 .p-search__inner {
@@ -810,6 +933,8 @@ li {
 .p-page__inner-archive img {
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-page__inner-single {
@@ -836,25 +961,26 @@ li {
 }
 @media (min-width: 600px) {
   .p-page__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     left: 10%;
     transition: all 0.3s;
   }
 }
 @media (min-width: 1025px) {
   .p-page__content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     left: 5%;
     transition: all 0.3s;
   }
 }
 
 .p-page__title {
-  font-family: "Roboto", sans-serif;
+  font-family: "Robot";
 }
 .p-page__title::after {
   content: ":";
+  font-family: "Robot";
 }
 @media (min-width: 1025px) {
   .p-page__title {
@@ -930,6 +1056,78 @@ li {
 .is-nowpage {
   background: #3C2A10;
   color: #FFF;
+}
+
+.p-page__pagination {
+  padding: 50px 19px 30px;
+}
+@media (min-width: 600px) {
+  .p-page__pagination {
+    padding: 0 13%;
+  }
+}
+@media (min-width: 1025px) {
+  .p-page__pagination {
+    padding: 0 24%;
+  }
+}
+.p-page__pagination > nav > div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+.p-page__pagination > nav > div > .page-numbers {
+  display: none;
+  height: 35px;
+  width: 35px;
+  color: #707070;
+  font-weight: bold;
+  font-family: "Robot";
+  border: 1px solid #707070;
+  font-size: 16px;
+  text-align: center;
+  line-height: 35px;
+}
+@media (min-width: 600px) {
+  .p-page__pagination > nav > div > .page-numbers {
+    display: block;
+  }
+}
+.p-page__pagination > nav > div > .prev {
+  display: block;
+  border: none;
+  position: relative;
+}
+.p-page__pagination > nav > div > .prev::before {
+  position: absolute;
+  content: "前へ";
+  width: 40px;
+  font-size: 16px;
+  color: #707070;
+  left: 30px;
+}
+@media (min-width: 600px) {
+  .p-page__pagination > nav > div > .prev::before {
+    display: none;
+  }
+}
+.p-page__pagination > nav > div > .next {
+  display: block;
+  border: none;
+  position: relative;
+}
+.p-page__pagination > nav > div > .next::before {
+  position: absolute;
+  content: "次へ";
+  width: 40px;
+  font-size: 16px;
+  color: #707070;
+  left: -40px;
+}
+@media (min-width: 600px) {
+  .p-page__pagination > nav > div > .next::before {
+    display: none;
+  }
 }
 
 .p-souse__wrapper {
@@ -1147,6 +1345,10 @@ li {
   .u-margin__archive-title {
     margin-bottom: 25px;
   }
+}
+
+.u-margin-left20 {
+  margin-left: 20px;
 }
 
 .u-margin__ul {

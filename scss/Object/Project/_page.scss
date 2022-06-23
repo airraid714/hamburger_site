@@ -9,6 +9,7 @@
     img{
         height: 100%;
         width: 100%;
+        object-fit: cover;
     }
 }
 .p-page__inner-single{
@@ -32,13 +33,13 @@
     transition: all 0.3s;
 
     @include breakpoint(tablet){
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         left: 10%;
         transition: all 0.3s;
     }
     @include breakpoint(pc){
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         left: 5%;
         transition: all 0.3s;
 
@@ -46,9 +47,12 @@
 }
 
 .p-page__title{
-    font-family: 'Roboto', sans-serif;
+    font-family: $title-font;
+
     &::after{
         content: ":";
+        font-family: $title-font;
+
     }
 
     @include breakpoint(pc){
@@ -118,4 +122,82 @@
 .is-nowpage{
     background: $brown;
     color: $white;
+}
+
+//------------------------
+//<?php the_posts_pagination(); ?>でよびだしたページャーのスタイリング
+//------------------------
+
+.p-page__pagination{
+    padding: 50px 19px 30px;
+
+    @include breakpoint(tablet){
+        padding: 0 13%;
+
+    }
+    @include breakpoint(pc){
+        padding: 0 24%;
+    }
+
+    >nav{
+
+        >div{
+            display: flex;
+            justify-content:space-between;
+            font-size: 16px;
+
+            >.page-numbers{
+                display: none;
+                height: 35px;
+                width: 35px;
+                color: $gray;
+                font-weight: bold;
+                font-family: "Robot";
+                border: 1px solid $gray;
+                font-size: 16px;
+                text-align: center;
+                line-height: 35px;
+                @include breakpoint(tablet){
+                   display: block;
+                }            
+            }
+
+            >.prev{
+                display: block;
+                border: none;
+                position: relative;
+                &::before{
+                    position: absolute;
+                    content: "前へ";
+                    width: 40px;
+                    font-size: 16px;
+                    color: $gray;
+                    left: 30px;
+
+                    @include breakpoint(tablet){
+                        display: none;
+                    }
+
+                }
+            }
+            >.next{
+                display: block;
+                border: none;
+                position: relative;
+                &::before{
+                    position: absolute;
+                    content: "次へ";
+                    width: 40px;
+                    font-size: 16px;
+                    color: $gray;
+                    left: -40px;
+
+                    @include breakpoint(tablet){
+                        display: none;
+                    }
+                }
+
+            }
+        }
+    }
 }
