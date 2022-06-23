@@ -4,7 +4,7 @@
     font-size: 40px;
     margin-bottom: 38px;
     transition: all 0.2s;
-    color: $gray;
+    color: $gray;       
 
     a{
         color: $gray;
@@ -58,5 +58,15 @@
     color: $white;
     font-size: 16px;
     font-weight: bold;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: $text-font;
+}
+.c-title__sidebar{
+    display: none;
+    font-size: 34px;
+    color: $gray;
+    font-family: $title-font;
+
+    @include breakpoint(pc){
+        display: block;
+    }
 }

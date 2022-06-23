@@ -1,9 +1,8 @@
             <footer class="l-footer p-footer c-grid__footer">
                 <div class="p-footer__inner">
-                    <div class="p-footer__link">
-                        <a>ショップ情報</a>
-                        <a>ヒストリー</a>
-                    </div>
+                    <?php wp_nav_menu(array(
+                        'theme_location' => 'footer-menu',
+                    )); ?>
                     <div class="p-footer__copyright">
                         <p>Copyright: RaiseTech</p>
                     </div>
