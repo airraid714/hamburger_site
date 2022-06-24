@@ -44,12 +44,30 @@
         <?php else: ?>
             <p>表示できるフードがありません</p>
         <?php endif; ?>
-        <div class="p-page__pagination">   
+        <div class="p-page__pagination"> <!-----------ページャー--------------->
+            <div class="p-page_count">
+                <p class="c-text__pager u-breakpoint__sm">page</p>
+                <div class="p-page__viewer">
+                    <?php 
+                        // 現在のページ番号を取得して表示
+                        $current_page = get_query_var( 'paged' ); 
+                        $current_page = $current_page == 0 ? '1' : $current_page;
+                        echo  '<p class="c-text__pager u-breakpoint__sm">'.$current_page.'</p>';
+                    ?>
+                    <p class="c-text__pager u-breakpoint__sm">/</p>
+                    <?php
+                        // 全ページ数を取得して表示
+                        $max_pages = $wp_query->max_num_pages;
+                        echo '<p class="c-text__pager u-breakpoint__sm">'.$max_pages.'</p>';
+                    ?>
+                 </div>
+            </div>
             <?php the_posts_pagination(array(
                 'prev_text' => '&lt;&lt;',
                 'next_text' => '&gt;&gt;',
+                'mid_size' => 6,
             )); ?>
-        </div>
+        </div>                            <!-----------ページャー---------------> 
         <div class="p-page__pager">
             <p class="c-text__pager u-breakpoint__sm">page 1/10</p>
             <a href="#" class="p-page__link">
