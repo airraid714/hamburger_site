@@ -1063,25 +1063,38 @@ li {
   display: flex;
   align-items: center;
   padding: 50px 19px 30px;
+  transition: all 0.3s;
 }
 @media (min-width: 600px) {
   .p-page__pagination {
-    padding: 0 10%;
+    padding: 100px 10% 30px;
+    transition: all 0.3s;
   }
 }
 @media (min-width: 1025px) {
   .p-page__pagination {
-    padding: 0 24%;
+    padding: 150px 24% 60px;
+    transition: all 0.3s;
   }
 }
 .p-page__pagination > .p-page_count {
   width: 80px;
   margin-right: 20px;
-  display: flex;
+  display: none;
   justify-content: space-between;
 }
+@media (min-width: 600px) {
+  .p-page__pagination > .p-page_count {
+    display: flex;
+  }
+}
 .p-page__pagination > .p-page_count > .p-page__viewer {
-  display: flex;
+  display: none;
+}
+@media (min-width: 600px) {
+  .p-page__pagination > .p-page_count > .p-page__viewer {
+    display: flex;
+  }
 }
 .p-page__pagination > nav {
   width: 100%;
@@ -1089,7 +1102,6 @@ li {
 .p-page__pagination > nav > div {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   font-size: 16px;
 }
 .p-page__pagination > nav > div > .page-numbers {
@@ -1107,7 +1119,11 @@ li {
 @media (min-width: 600px) {
   .p-page__pagination > nav > div > .page-numbers {
     display: block;
+    margin: 0 auto;
   }
+}
+.p-page__pagination > nav > div > :first-child {
+  margin-left: 0;
 }
 .p-page__pagination > nav > div > .current {
   background: #3C2A10;
@@ -1137,6 +1153,7 @@ li {
   border: none;
   position: relative;
   font-weight: 100;
+  margin-left: auto;
 }
 .p-page__pagination > nav > div > .next::before {
   position: absolute;
