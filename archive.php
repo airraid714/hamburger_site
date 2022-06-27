@@ -27,24 +27,19 @@
         <?php if(have_posts()): ?>
         <?php while(have_posts()):
                 the_post(); ?>
-                <ul class="p-item__list">
+                <ul class="p-item__list">        <!-------------フードのリスト--------->
                     <li class="p-item">
                         <?php the_post_thumbnail(); ?>
                         <div class="p-item__content">
                             <h3 class="c-title__item u-margin__bottom1"><?php the_title(); ?></h3>
                             <?php the_content(); ?>
                             <div class="p-item__box">
-                            <a href="#" class="p-item__link">詳しく見る</a>
+                            <a href="<?php the_permalink(); ?>" class="p-item__link">詳しく見る</a>
                             </div>
                         </div>
                     </li>
-                </ul>
-            <?php endwhile; ?> 
-            <?php wp_reset_postdata(); ?>
-        <?php else: ?>
-            <p>表示できるフードがありません</p>
-        <?php endif; ?>
-        <div class="p-page__pagination"> <!-----------ページャー--------------->
+                </ul>                            <!-------------フードのリスト--------->  
+                <div class="p-page__pagination"> <!-----------ページャー--------------->
             <div class="p-page_count">
                 <p class="c-text__pager">page</p>
                 <div class="p-page__viewer">
@@ -67,7 +62,14 @@
                 'next_text' => '&gt;&gt;',
                 'mid_size' => 6,
             )); ?>
-        </div>                            <!-----------ページャー--------------->          
+            </div>                            <!-----------ページャー--------------->          
+        <?php endwhile; ?> 
+            <?php wp_reset_postdata(); ?>
+        <?php else: ?>
+            <div class="p-articles">
+                <p class="c-text__articles">表示できるフードがありません</p>
+            </div>
+        <?php endif; ?>
     </div>
 </main>
 
