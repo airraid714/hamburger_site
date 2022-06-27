@@ -129,21 +129,40 @@
 //------------------------
 
 .p-page__pagination{
+    width: 100%;
+    display: flex;
+    align-items: center;
     padding: 50px 19px 30px;
-
+    transition: all .3s;
     @include breakpoint(tablet){
-        padding: 0 13%;
-
+        padding: 100px 10% 30px;
+        transition: all .3s;
     }
     @include breakpoint(pc){
-        padding: 0 24%;
+        padding: 150px 24% 60px;
+        transition: all .3s;
     }
-
-    >nav{
-
-        >div{
+    >.p-page_count{
+        width: 80px;
+        margin-right: 20px;
+        display: none;
+        justify-content: space-between;
+        @include breakpoint(tablet){
             display: flex;
-            justify-content:space-between;
+        }
+
+        >.p-page__viewer{
+            display: none;
+            @include breakpoint(tablet){
+                display: flex;
+            }
+        }
+    }
+    >nav{
+        width: 100%;
+        >div{
+            width: 100%;
+            display: flex;
             font-size: 16px;
 
             >.page-numbers{
@@ -159,13 +178,21 @@
                 line-height: 35px;
                 @include breakpoint(tablet){
                    display: block;
+                   margin: 0 auto;
                 }            
             }
-
+            >:first-child{
+                margin-left: 0;
+            }
+            >.current{
+                background: $brown;
+                color: $white;            
+            }
             >.prev{
                 display: block;
                 border: none;
                 position: relative;
+                font-weight: 100;
                 &::before{
                     position: absolute;
                     content: "前へ";
@@ -184,6 +211,8 @@
                 display: block;
                 border: none;
                 position: relative;
+                font-weight: 100;
+                margin-left: auto;
                 &::before{
                     position: absolute;
                     content: "次へ";
