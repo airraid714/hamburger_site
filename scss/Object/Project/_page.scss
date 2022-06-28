@@ -1,6 +1,35 @@
 @use "../../Foundation/variable" as *;
-.p-page__wrapper{
-
+.p-page__wrapper{       // WPに対するスタイリング  
+    padding: 0 20px;
+    @include breakpoint(tablet){
+        padding: 0 60px;
+    }
+    @include breakpoint(pc){
+        padding: 0 100px;
+    }
+    
+    >.wp-container-2{
+        >.wp-block-image{
+        }
+        display: block;
+        @include breakpoint(tablet){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;    
+        }
+        @include breakpoint(pc){
+            grid-template-columns: repeat(3, 1fr);
+            
+        }
+    
+    }
+    .wp-block-gallery.has-nested-images figure.wp-block-image:not(#individual-image){
+        width: auto;
+        margin-bottom: 20px;
+        @include breakpoint(tablet){
+            margin-bottom: 0;
+        }
+    }
 }
 
 .p-page__inner-archive{
