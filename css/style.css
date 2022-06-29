@@ -1431,6 +1431,10 @@ ul li ul {
   padding-left: 30px;
 }
 
+.wp-block-button > .has-black-color {
+  border-color: #707070;
+}
+
 .u-margin__bottom1 {
   margin-bottom: 24px;
 }
