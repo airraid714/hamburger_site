@@ -14,7 +14,6 @@
             </div>
 
             <div class="p-page__wrapper">
-
                 <?php the_content(); ?>
             </div>
     <?php endwhile; ?> 

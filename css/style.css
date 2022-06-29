@@ -521,7 +521,7 @@ li {
 
 .p-item__wrapper {
   width: 100%;
-  min-height: 100vh;
+  min-height: 150vh;
 }
 
 .p-item__list {
@@ -974,6 +974,8 @@ li {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .p-page__inner-single {
@@ -1472,6 +1474,10 @@ ul li ul {
 
 .u-margin__ol {
   margin-top: 20px;
+}
+
+.u-height__min {
+  min-height: 150vh;
 }
 
 .u-breakpoint__sm {

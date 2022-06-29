@@ -11,7 +11,7 @@
             <h2 class="p-section__title p-section__color1">Take Out</h2>    
             <div class="c-inner__contents">
                 <?php
-                    $arg = array('category' => 3 ); //指定したいカテゴリーのIDを入れる
+                    $arg = array('category_name' => 'take-out' ); //指定したいカテゴリーのスラッグをを入れる
                     $posts = get_posts( $arg );
                     if( $posts ): ?>
                     <?php
@@ -36,7 +36,7 @@
             <div class="c-inner__contents">
                 <?php
                     $arg = array(
-                                'category' => 4 
+                                'category_name' => 'eat-in' 
                             );
                     $posts = get_posts( $arg );
                     if( $posts ): ?>
