@@ -522,7 +522,7 @@ li {
 
 .p-item__wrapper {
   width: 100%;
-  min-height: 150vh;
+  min-height: 100vh;
 }
 
 .p-item__list {
