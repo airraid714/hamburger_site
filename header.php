@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php wp_head(); ?>
     </head>
-    <body <?php body_class( $class ); ?>>
+    <body <?php body_class(); ?>>
+        <?php wp_body_open(); ?>
         <div class="c-container c-grid__layout">
             <header class="l-header c-grid__header">
                 <div class="p-header">
