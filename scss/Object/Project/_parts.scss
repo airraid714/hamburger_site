@@ -67,3 +67,55 @@
 .p-parts__font{
     font-weight: bold;
 }
+
+// WPで出力した際のパーツのスタイリング---------------
+
+.wp-block-media-text__media{
+}
+.wp-block-quote{
+    padding: 50px 50px 60px;
+}
+
+//-----------リスト----------------//
+li{
+    ol{
+        margin-top: 20px;
+    }
+}
+ul{
+    li{
+        ul{
+            margin: 20px 0 0 20px;
+        }
+       
+    }
+}
+.wp-block-code{
+    padding: 50px;
+    >p{
+        margin-bottom: 60px;
+    }
+}
+.wp-block-table{
+    
+    >table{
+        >tbody{
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+            >tr{
+                height: 77px;
+                td{
+                    border-bottom: 1px solid black;
+                    border-right: 1px solid black;;
+                    padding-left: 30px;
+                }
+            }
+            
+        }
+    }
+}
+.wp-block-button{
+    >.has-black-color{
+        border-color: #707070;
+    }
+}

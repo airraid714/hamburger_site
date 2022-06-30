@@ -9,7 +9,7 @@
                 <div class="c-layer__img"></div>
                 <?php the_post_thumbnail(); ?>
                 <div class="p-page__content">
-                    <h1 class="c-title__mainvisual"><?php the_title(); ?></h1> 
+                    <h2 class="c-title__mainvisual"><?php the_title(); ?></h2> 
                 </div>
             </div>
 

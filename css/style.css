@@ -521,7 +521,7 @@ li {
 
 .p-item__wrapper {
   width: 100%;
-  min-height: 100vh;
+  min-height: 150vh;
 }
 
 .p-item__list {
@@ -927,6 +927,44 @@ li {
   color: #FFF;
 }
 
+.p-page__wrapper {
+  padding: 0 20px;
+}
+@media (min-width: 600px) {
+  .p-page__wrapper {
+    padding: 0 60px;
+  }
+}
+@media (min-width: 1025px) {
+  .p-page__wrapper {
+    padding: 0 100px;
+  }
+}
+.p-page__wrapper > .wp-container-2 {
+  display: block;
+}
+@media (min-width: 600px) {
+  .p-page__wrapper > .wp-container-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+@media (min-width: 1025px) {
+  .p-page__wrapper > .wp-container-2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.p-page__wrapper .wp-block-gallery.has-nested-images figure.wp-block-image:not(#individual-image) {
+  width: auto;
+  margin-bottom: 20px;
+}
+@media (min-width: 600px) {
+  .p-page__wrapper .wp-block-gallery.has-nested-images figure.wp-block-image:not(#individual-image) {
+    margin-bottom: 0;
+  }
+}
+
 .p-page__inner-archive {
   height: 283px;
   position: relative;
@@ -936,6 +974,8 @@ li {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .p-page__inner-single {
@@ -1361,6 +1401,42 @@ li {
   font-weight: bold;
 }
 
+.wp-block-quote {
+  padding: 50px 50px 60px;
+}
+
+li ol {
+  margin-top: 20px;
+}
+
+ul li ul {
+  margin: 20px 0 0 20px;
+}
+
+.wp-block-code {
+  padding: 50px;
+}
+.wp-block-code > p {
+  margin-bottom: 60px;
+}
+
+.wp-block-table > table > tbody {
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+}
+.wp-block-table > table > tbody > tr {
+  height: 77px;
+}
+.wp-block-table > table > tbody > tr td {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  padding-left: 30px;
+}
+
+.wp-block-button > .has-black-color {
+  border-color: #707070;
+}
+
 .u-margin__bottom1 {
   margin-bottom: 24px;
 }
@@ -1398,6 +1474,10 @@ li {
 
 .u-margin__ol {
   margin-top: 20px;
+}
+
+.u-height__min {
+  min-height: 150vh;
 }
 
 .u-breakpoint__sm {
