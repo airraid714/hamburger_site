@@ -6,7 +6,7 @@
     
     <div class="p-page__inner-archive ">
         <div class="c-layer__img"></div>
-        <img src="<?php echo get_template_directory_uri(); ?>/img/Archive/mainvisual2.jpg">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Archive/mainvisual2.jpg">
         <div class="p-page__content">
             <h2 class="p-page__title c-title__mainvisual">Search</h2> 
             <?php
@@ -42,7 +42,7 @@
         <?php if(have_posts()): ?>
         <?php while(have_posts()):
             the_post(); ?>
-            <ul class="p-item__list">
+            <ul class="p-item__list" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <li class="p-item">
                     <?php the_post_thumbnail(); ?>
                     <div class="p-item__content">
@@ -54,30 +54,6 @@
                     </div>
                 </li>
             </ul>
-            <div class="p-page__pagination"> <!-----------ページャー--------------->
-                <div class="p-page_count">
-                    <p class="c-text__pager">page</p>
-                    <div class="p-page__viewer">
-                        <?php 
-                            // 現在のページ番号を取得して表示
-                            $current_page = get_query_var( 'paged' ); 
-                            $current_page = $current_page == 0 ? '1' : $current_page;
-                            echo  '<p class="c-text__pager">'.$current_page.'</p>';
-                        ?>
-                        <p class="c-text__pager">/</p>
-                        <?php
-                            // 全ページ数を取得して表示
-                            $max_pages = $wp_query->max_num_pages;
-                            echo '<p class="c-text__pager">'.$max_pages.'</p>';
-                        ?>
-                    </div>
-                </div>
-                <?php the_posts_pagination(array(
-                    'prev_text' => '&lt;&lt;',
-                    'next_text' => '&gt;&gt;',
-                    'mid_size' => 5,
-                )); ?>
-            </div>                              <!-----------ページャー--------------->
         <?php endwhile; ?> 
         <?php wp_reset_postdata(); ?>
         <?php else: ?>
@@ -85,6 +61,31 @@
                 <p class="c-text__articles">表示できるページがありません</p>
             </div>
         <?php endif; ?>
+        <div class="p-page__pagination"> <!-----------ページャー--------------->
+            <div class="p-page_count">
+                <p class="c-text__pager">page</p>
+                <div class="p-page__viewer">
+                    <?php 
+                        // 現在のページ番号を取得して表示
+                        $current_page = get_query_var( 'paged' ); 
+                        $current_page = $current_page == 0 ? '1' : $current_page;
+                        echo  '<p class="c-text__pager">'.$current_page.'</p>';
+                    ?>
+                    <p class="c-text__pager">/</p>
+                    <?php
+                        // 全ページ数を取得して表示
+                        $max_pages = $wp_query->max_num_pages;
+                        echo '<p class="c-text__pager">'.$max_pages.'</p>';
+                    ?>
+                </div>
+            </div>
+            <?php the_posts_pagination(array(
+                'prev_text' => '&lt;&lt;',
+                'next_text' => '&gt;&gt;',
+                'mid_size' => 5,
+            )); ?>
+            <?php wp_link_pages(); ?>
+        </div>                              <!-----------ページャー--------------->
     </div>
 </main>
 
