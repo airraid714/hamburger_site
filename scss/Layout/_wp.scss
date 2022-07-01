@@ -3,8 +3,7 @@
 //-------------------
 //WPのadminバーがずれるのを修正
 #wpadminbar{
-    position: absolute;
-    //top: -46px;
+    top: -46px;
     @include breakpoint(tablet){
         top: 0;
         position: fixed;
